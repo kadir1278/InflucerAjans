@@ -70,8 +70,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity\HighEntity.cs" />
-    <Compile Include="BaseEntity\LightEntity.cs" />
-    <Compile Include="Entity\About.cs" />
+    <Compile Include="BaseEntity\LittleEntity.cs" />
+    <Compile Include="Entity\tblAbout.cs" />
+    <Compile Include="Entity\tblAPI.cs" />
+    <Compile Include="Entity\tblApplicationForm.cs" />
+    <Compile Include="Entity\tblBrand.cs" />
+    <Compile Include="Entity\tblBrandImage.cs" />
+    <Compile Include="Entity\tblInfluencer.cs" />
+    <Compile Include="Entity\tblInfluencerVideo.cs" />
+    <Compile Include="Entity\tblLang.cs" />
+    <Compile Include="Entity\tblService.cs" />
+    <Compile Include="Entity\tblSlider.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\InfluencerContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,5 +89,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

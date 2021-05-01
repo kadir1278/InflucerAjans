@@ -31,5 +31,6 @@ namespace InflucerEntity.BaseEntity
         public string seoFacebookKeywrods { get; set; }
         public string seoFacebookDescription { get; set; }
         public string seoFacebookUrl { get; set; }
+        public int LangID { get; set; }
     }
 }
