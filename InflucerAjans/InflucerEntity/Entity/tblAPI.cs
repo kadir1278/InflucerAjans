@@ -12,8 +12,6 @@ namespace InflucerEntity.Entity
         public string Key { get; set; }
         public string SecretKey { get; set; }
         public string Title { get; set; }
-        public int BrandID { get; set; }
-        public tblBrand tblBrand { get; set; }
 
     }
 }

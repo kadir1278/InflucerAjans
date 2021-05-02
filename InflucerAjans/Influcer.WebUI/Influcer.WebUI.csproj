@@ -633,6 +633,9 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AboutController.cs" />
+    <Compile Include="Areas\Admin\Controllers\APIController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ApplicationFormController.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -749,6 +752,12 @@
     <Content Include="Areas\Admin\Views\Dashboard\Languages.cshtml" />
     <Content Include="Areas\Admin\Views\Dashboard\Service.cshtml" />
     <Content Include="Areas\Admin\Views\Dashboard\Slider.cshtml" />
+    <Content Include="Areas\Admin\Views\About\AddAbout.cshtml" />
+    <Content Include="Areas\Admin\Views\About\UpdateAbout.cshtml" />
+    <Content Include="Areas\Admin\Views\API\AddAPI.cshtml" />
+    <Content Include="Areas\Admin\Views\API\UpdateAPI.cshtml" />
+    <Content Include="Areas\Admin\Views\ApplicationForm\AddApplicationForm.cshtml" />
+    <Content Include="Areas\Admin\Views\ApplicationForm\UpdateApplicationForm.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
