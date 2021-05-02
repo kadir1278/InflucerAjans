@@ -43,6 +43,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -733,6 +739,16 @@
     <Content Include="Areas\Admin\Context\lib\jquery-validation\LICENSE.md" />
     <Content Include="Areas\Admin\Context\lib\jquery\dist\jquery.min.map" />
     <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\API.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\About.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\ApplicationForm.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\Brand.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\BrandImage.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\Influencer.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\InfluencerVideo.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\Languages.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\Service.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\Slider.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -746,6 +762,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="File\ApplicationForms\" />
+    <Folder Include="Image\Abouts\" />
+    <Folder Include="Image\Brands\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

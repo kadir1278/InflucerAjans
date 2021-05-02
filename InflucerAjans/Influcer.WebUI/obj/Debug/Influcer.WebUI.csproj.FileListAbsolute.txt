@@ -75,3 +75,5 @@ C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\Influcer.WebUI\obj\Debug\I
 C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\Influcer.WebUI\obj\Debug\Influcer.WebUI.csproj.CopyComplete
 C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\Influcer.WebUI\obj\Debug\Influcer.WebUI.dll
 C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\Influcer.WebUI\obj\Debug\Influcer.WebUI.pdb
+C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\Influcer.WebUI\bin\EntityFramework.SqlServer.dll
+C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\Influcer.WebUI\bin\EntityFramework.SqlServer.xml

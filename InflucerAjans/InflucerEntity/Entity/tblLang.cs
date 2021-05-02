@@ -9,8 +9,7 @@ namespace InflucerEntity.Entity
 {
     public class tblLang : LittleEntity
     {
-        public string Phone { get; set; }
-        public string EMail { get; set; }
-        public string Address { get; set; }
+        public string Lang { get; set; }
+        public string LangCode{ get; set; }
     }
 }

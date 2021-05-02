@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "InfluencerVideo";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model IEnumerable<InflucerEntity.Entity.tblInfluencerVideo>
+<form method="post">
+    <div class="card-box mb-30">
+        <h2 class="h4 pd-20">Influencer Video Listele</h2>
+        <table class="data-table table nowrap">
+            <thead>
+                <tr>
+                    <th>InfluencerVideoPath</th>
+                    <th>InfluencerID</th>
+                    <th>LastDateTime</th>
+                    <th>Aktif Durumu</th>
+                    <th class="datatable-nosort">İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @if (item.InfluencerVideoPath.EndsWith(".PNG") || item.InfluencerVideoPath.EndsWith(".JPG") || item.InfluencerVideoPath.EndsWith(".JPEG") || item.InfluencerVideoPath.EndsWith(".GIF") || item.InfluencerVideoPath.EndsWith(".TIFF") || item.InfluencerVideoPath.EndsWith(".jpg") || item.InfluencerVideoPath.EndsWith(".png") || item.InfluencerVideoPath.EndsWith(".jpeg") || item.InfluencerVideoPath.EndsWith(".tiff") || item.InfluencerVideoPath.EndsWith(".gif"))
+                        {
+                            <td><img src="~/Image/Abouts/@item.InfluencerVideoPath" width="150" /></td>
+                        }
+                        else if (item.InfluencerVideoPath.EndsWith(".avi") || item.InfluencerVideoPath.EndsWith(".AVI") || item.InfluencerVideoPath.EndsWith(".mp4") || item.InfluencerVideoPath.EndsWith(".MP4") || item.InfluencerVideoPath.EndsWith(".mov") || item.InfluencerVideoPath.EndsWith(".MOV") || item.InfluencerVideoPath.EndsWith(".flv") || item.InfluencerVideoPath.EndsWith(".FLV") || item.InfluencerVideoPath.EndsWith(".mpg") || item.InfluencerVideoPath.EndsWith(".MPG"))
+                        {
+                            <td>
+                                <video width="150" height="150" controls>
+                                    <source src="~/Image/Abouts/@item.InfluencerVideoPath" type="video/mp4">
+                                </video>
+                            </td>
+                        }
+                        <td>@item.InfluencerID</td>
+                        <td>@item.LastDateTime.ToString("dd:MM:yyyy")</td>
+                        @if (item.IsActive == true)
+                        {
+                            <td><span class="badge badge-success"><i class="fa fa-check"></i> Aktif</span></td>
+                        }
+                        else
+                        {
+                            <td><span class="badge badge-danger"><i class="fa fa-remove"></i> Pasif</span></td>
+                        }
+                        <td>
+                            <div class="dropdown">
+                                <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                                    <i class="dw dw-more"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                                    <a class="dropdown-item" href="/Admin/About/UpdateAbout/@item.ID"><i class="dw dw-edit2"></i> Güncelle</a>
+                                    <a class="dropdown-item" onclick="return confirm('Silmek istediğinize eminmisiniz ?')" href="/Admin/About/DeleteAbout/@item.ID"><i class="dw dw-delete-3"></i> Sil</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</form>
+
