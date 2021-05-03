@@ -640,6 +640,7 @@
     <Compile Include="Areas\Admin\Controllers\BrandImageController.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Admin\Controllers\InfluencerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\InfluencerVideoController.cs" />
     <Compile Include="Areas\Admin\Controllers\LangController.cs" />
     <Compile Include="Areas\Admin\Controllers\ServiceController.cs" />
     <Compile Include="Areas\Admin\Controllers\SliderController.cs" />
@@ -776,6 +777,8 @@
     <Content Include="Areas\Admin\Views\BrandImage\UpdateBrandImage.cshtml" />
     <Content Include="Areas\Admin\Views\Influencer\AddInfluencer.cshtml" />
     <Content Include="Areas\Admin\Views\Influencer\UpdateInfluencer.cshtml" />
+    <Content Include="Areas\Admin\Views\InfluencerVideo\AddInfluencerVideo.cshtml" />
+    <Content Include="Areas\Admin\Views\InfluencerVideo\UpdateInfluencerVideo.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -792,6 +795,7 @@
     <Folder Include="File\ApplicationForms\" />
     <Folder Include="Image\Abouts\" />
     <Folder Include="Image\Brands\" />
+    <Folder Include="Image\InfluencerVideos\" />
     <Folder Include="Image\Services\" />
     <Folder Include="Image\Sliders\" />
     <Folder Include="Models\" />
