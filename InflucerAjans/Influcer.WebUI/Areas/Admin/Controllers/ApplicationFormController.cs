@@ -2,6 +2,7 @@
 using InflucerEntity.Model;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -19,24 +20,21 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult AddApplicationForm(tblApplicationForm API)
+        public ActionResult AddApplicationForm(tblApplicationForm API, HttpPostedFileBase FilePath)
         {
-            var x = db.tblApplicationForms.Count();
             if (ModelState.IsValid)
             {
-                if (x > 1)
+                if (FilePath != null)
                 {
-                    ViewBag.Mesaj = "Sistemde En fazla 1 Adet Hakkımızda Bulunur";
-                    return View(API);
-                }
-                else
-                {
+                    string photoName = Path.GetFileName(Guid.NewGuid().ToString() + FilePath.FileName);
+                    var url = Path.Combine(Server.MapPath("~/File/ApplicationForms/" + photoName));
+                    FilePath.SaveAs(url);
+                    API.FilePath = photoName;
                     API.IsActive = true;
                     API.LastDateTime = DateTime.Now;
                     db.tblApplicationForms.Add(API);
                     db.SaveChanges();
                     return RedirectToAction("ApplicationForm", "Dashboard");
-
                 }
             }
             return View(API);
@@ -49,35 +47,43 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tblApplicationForm API = db.tblApplicationForms.Find(id);
-            if (API == null)
+            tblApplicationForm about = db.tblApplicationForms.Find(id);
+            if (about == null)
             {
                 return HttpNotFound();
             }
-            return View(API);
+            return View(about);
         }
         [HttpPost, ValidateInput(false)]
-        public ActionResult UpdateApplicationForm(int id, tblApplicationForm API)
+        public ActionResult UpdateApplicationForm(int id, tblApplicationForm about, HttpPostedFileBase FilePath)
         {
-            var x = db.tblApplicationForms.Find(id);
+            var AU = db.tblApplicationForms.Find(id);
             if (ModelState.IsValid)
             {
-
-                x.Name = API.Name;
-                x.Surname = API.Surname;
-                x.City = API.City;
-                x.District = API.District;
-                x.Address = API.Address;
-                x.FilePath = API.FilePath;
-                x.Subject = API.Subject;
-                x.Message = API.Message;
-                x.IsActive = API.IsActive;
-                x.LastDateTime = DateTime.Now;
-                db.SaveChanges();
-                return RedirectToAction("ApplicationForm", "Dashboard");
-
+                if (FilePath != null)
+                {
+                    if (System.IO.File.Exists(Server.MapPath("~/File/ApplicationForms/" + about.FilePath)))
+                    {
+                        System.IO.File.Delete(Server.MapPath("~/File/ApplicationForms/" + about.FilePath));
+                    }
+                    string photoName = Path.GetFileName(Guid.NewGuid().ToString() + FilePath.FileName);
+                    var url = Path.Combine(Server.MapPath("~/File/ApplicationForms/" + photoName));
+                    FilePath.SaveAs(url);
+                    AU.FilePath = photoName;
+                    AU.Name = about.Name;
+                    AU.Surname= about.Surname;
+                    AU.City = about.City;
+                    AU.District = about.District;
+                    AU.Address = about.Address;
+                    AU.Subject = about.Subject;
+                    AU.Message = about.Message;
+                    AU.IsActive = about.IsActive;
+                    AU.LastDateTime = DateTime.Now;
+                    db.SaveChanges();
+                    return RedirectToAction("ApplicationForm", "Dashboard");
+                }
             }
-            return View(API);
+            return View(about);
         }
         #endregion
         #region Delete

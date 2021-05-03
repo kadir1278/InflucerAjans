@@ -24,13 +24,13 @@
                     <tr>
                         @if (item.BrandImagePath.EndsWith(".PNG") || item.BrandImagePath.EndsWith(".JPG") || item.BrandImagePath.EndsWith(".JPEG") || item.BrandImagePath.EndsWith(".GIF") || item.BrandImagePath.EndsWith(".TIFF") || item.BrandImagePath.EndsWith(".jpg") || item.BrandImagePath.EndsWith(".png") || item.BrandImagePath.EndsWith(".jpeg") || item.BrandImagePath.EndsWith(".tiff") || item.BrandImagePath.EndsWith(".gif"))
                         {
-                            <td><img src="~/Image/Abouts/@item.BrandImagePath" width="150" /></td>
+                            <td><img src="~/Image/Brands/@item.BrandImagePath" width="150" /></td>
                         }
                         else if (item.BrandImagePath.EndsWith(".avi") || item.BrandImagePath.EndsWith(".AVI") || item.BrandImagePath.EndsWith(".mp4") || item.BrandImagePath.EndsWith(".MP4") || item.BrandImagePath.EndsWith(".mov") || item.BrandImagePath.EndsWith(".MOV") || item.BrandImagePath.EndsWith(".flv") || item.BrandImagePath.EndsWith(".FLV") || item.BrandImagePath.EndsWith(".mpg") || item.BrandImagePath.EndsWith(".MPG"))
                         {
                             <td>
                                 <video width="150" height="150" controls>
-                                    <source src="~/Image/Abouts/@item.BrandImagePath" type="video/mp4">
+                                    <source src="~/Image/Brands/@item.BrandImagePath" type="video/mp4">
                                 </video>
                             </td>
                         }
@@ -50,8 +50,8 @@
                                     <i class="dw dw-more"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-                                    <a class="dropdown-item" href="/Admin/About/UpdateAbout/@item.ID"><i class="dw dw-edit2"></i> Güncelle</a>
-                                    <a class="dropdown-item" onclick="return confirm('Silmek istediğinize eminmisiniz ?')" href="/Admin/About/DeleteAbout/@item.ID"><i class="dw dw-delete-3"></i> Sil</a>
+                                    <a class="dropdown-item" href="/Admin/BrandImage/UpdateBrandImage/@item.ID"><i class="dw dw-edit2"></i> Güncelle</a>
+                                    <a class="dropdown-item" onclick="return confirm('Silmek istediğinize eminmisiniz ?')" href="/Admin/BrandImage/DeleteBrandImage/@item.ID"><i class="dw dw-delete-3"></i> Sil</a>
                                 </div>
                             </div>
                         </td>

@@ -636,7 +636,13 @@
     <Compile Include="Areas\Admin\Controllers\AboutController.cs" />
     <Compile Include="Areas\Admin\Controllers\APIController.cs" />
     <Compile Include="Areas\Admin\Controllers\ApplicationFormController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BrandImageController.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\Admin\Controllers\InfluencerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LangController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ServiceController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SliderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -758,6 +764,18 @@
     <Content Include="Areas\Admin\Views\API\UpdateAPI.cshtml" />
     <Content Include="Areas\Admin\Views\ApplicationForm\AddApplicationForm.cshtml" />
     <Content Include="Areas\Admin\Views\ApplicationForm\UpdateApplicationForm.cshtml" />
+    <Content Include="Areas\Admin\Views\Service\AddService.cshtml" />
+    <Content Include="Areas\Admin\Views\Service\UpdateService.cshtml" />
+    <Content Include="Areas\Admin\Views\Slider\AddSlider.cshtml" />
+    <Content Include="Areas\Admin\Views\Slider\UpdateSlider.cshtml" />
+    <Content Include="Areas\Admin\Views\Lang\AddLang.cshtml" />
+    <Content Include="Areas\Admin\Views\Lang\UpdateLang.cshtml" />
+    <Content Include="Areas\Admin\Views\Brand\AddBrand.cshtml" />
+    <Content Include="Areas\Admin\Views\Brand\UpdateBrand.cshtml" />
+    <Content Include="Areas\Admin\Views\BrandImage\AddBrandImage.cshtml" />
+    <Content Include="Areas\Admin\Views\BrandImage\UpdateBrandImage.cshtml" />
+    <Content Include="Areas\Admin\Views\Influencer\AddInfluencer.cshtml" />
+    <Content Include="Areas\Admin\Views\Influencer\UpdateInfluencer.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -774,6 +792,8 @@
     <Folder Include="File\ApplicationForms\" />
     <Folder Include="Image\Abouts\" />
     <Folder Include="Image\Brands\" />
+    <Folder Include="Image\Services\" />
+    <Folder Include="Image\Sliders\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

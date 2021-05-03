@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InflucerEntity.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -32,5 +33,7 @@ namespace InflucerEntity.BaseEntity
         public string seoFacebookDescription { get; set; }
         public string seoFacebookUrl { get; set; }
         public int LangID { get; set; }
+        public tblLang tblLang { get; set; }
+
     }
 }

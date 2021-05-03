@@ -18,8 +18,8 @@ C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\InflucerEntity\bin\Debug\S
 C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\InflucerEntity\bin\Debug\System.Web.WebPages.xml
 C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\InflucerEntity\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\InflucerEntity\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\InflucerEntity\obj\Debug\InflucerEntity.csprojAssemblyReference.cache
 C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\InflucerEntity\obj\Debug\InflucerEntity.csproj.CoreCompileInputs.cache
 C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\InflucerEntity\obj\Debug\InflucerEntity.csproj.CopyComplete
 C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\InflucerEntity\obj\Debug\InflucerEntity.dll
 C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\InflucerEntity\obj\Debug\InflucerEntity.pdb
+C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\InflucerEntity\obj\Debug\InflucerEntity.csprojAssemblyReference.cache

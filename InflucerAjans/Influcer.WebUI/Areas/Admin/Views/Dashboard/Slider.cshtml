@@ -28,13 +28,13 @@
                         <td>@item.Content</td>
                         @if (item.ImageVideoPath.EndsWith(".PNG") || item.ImageVideoPath.EndsWith(".JPG") || item.ImageVideoPath.EndsWith(".JPEG") || item.ImageVideoPath.EndsWith(".GIF") || item.ImageVideoPath.EndsWith(".TIFF") || item.ImageVideoPath.EndsWith(".jpg") || item.ImageVideoPath.EndsWith(".png") || item.ImageVideoPath.EndsWith(".jpeg") || item.ImageVideoPath.EndsWith(".tiff") || item.ImageVideoPath.EndsWith(".gif"))
                         {
-                            <td><img src="~/Image/Abouts/@item.ImageVideoPath" width="150" /></td>
+                            <td><img src="~/Image/Sliders/@item.ImageVideoPath" width="150" /></td>
                         }
                         else if (item.ImageVideoPath.EndsWith(".avi") || item.ImageVideoPath.EndsWith(".AVI") || item.ImageVideoPath.EndsWith(".mp4") || item.ImageVideoPath.EndsWith(".MP4") || item.ImageVideoPath.EndsWith(".mov") || item.ImageVideoPath.EndsWith(".MOV") || item.ImageVideoPath.EndsWith(".flv") || item.ImageVideoPath.EndsWith(".FLV") || item.ImageVideoPath.EndsWith(".mpg") || item.ImageVideoPath.EndsWith(".MPG"))
                         {
                             <td>
                                 <video width="150" height="150" controls>
-                                    <source src="~/Image/Abouts/@item.ImageVideoPath" type="video/mp4">
+                                    <source src="~/Image/Sliders/@item.ImageVideoPath" type="video/mp4">
                                 </video>
                             </td>
                         }
@@ -53,8 +53,8 @@
                                     <i class="dw dw-more"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-                                    <a class="dropdown-item" href="/Admin/About/UpdateAbout/@item.ID"><i class="dw dw-edit2"></i> Güncelle</a>
-                                    <a class="dropdown-item" onclick="return confirm('Silmek istediğinize eminmisiniz ?')" href="/Admin/About/DeleteAbout/@item.ID"><i class="dw dw-delete-3"></i> Sil</a>
+                                    <a class="dropdown-item" href="/Admin/Slider/UpdateSlider/@item.ID"><i class="dw dw-edit2"></i> Güncelle</a>
+                                    <a class="dropdown-item" onclick="return confirm('Silmek istediğinize eminmisiniz ?')" href="/Admin/Slider/DeleteSlider/@item.ID"><i class="dw dw-delete-3"></i> Sil</a>
                                 </div>
                             </div>
                         </td>
