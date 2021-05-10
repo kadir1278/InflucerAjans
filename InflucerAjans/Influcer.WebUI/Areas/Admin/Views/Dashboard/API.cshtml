@@ -10,10 +10,10 @@
         <table class="data-table table nowrap">
             <thead>
                 <tr>
-                    <th>Key</th>
-                    <th>Secret Key</th>
-                    <th>LastDateTime</th>
-                    <th>Title</th>
+                    <th>Başlık</th>
+                    <th>Anatar</th>
+                    <th>Güvenlik Anahtarı</th>
+                    <th>Son Güncelleme Tarihi</th>
                     <th>Aktif Durumu</th>
                     <th class="datatable-nosort">İşlemler</th>
                 </tr>
@@ -22,10 +22,10 @@
                 @foreach (var item in Model)
                 {
                 <tr>
+                    <td>@item.Title</td>
                     <td>@item.Key</td>
                     <td>@item.SecretKey</td>
                     <td>@item.LastDateTime.ToString("dd:MM:yyyy")</td>
-                    <td>@item.Title</td>
                     @if (item.IsActive == true)
                     {
                         <td><span class="badge badge-success"><i class="fa fa-check"></i> Aktif</span></td>

@@ -12,11 +12,10 @@
         <table class="data-table table nowrap">
             <thead>
                 <tr>
-                    <th>Title</th>
-                    <th>Content</th>
-                    <th>ImageVideoPath</th>
-                    <th>ShortContent</th>
-                    <th>LastDateTime</th>
+                    <th>Başlık</th>
+                    <th>Resim</th>
+                    <th>Kısa Açıklama</th>
+                    <th>Son Güncelleme Tarihi</th>
                     <th>Aktif Durumu</th>
                     <th class="datatable-nosort">İşlemler</th>
                 </tr>
@@ -26,7 +25,6 @@
                 {
                     <tr>
                         <td>@item.Title</td>
-                        <td>@item.Content</td>
                         @if (item.ImageVideoPath.EndsWith(".PNG") || item.ImageVideoPath.EndsWith(".JPG") || item.ImageVideoPath.EndsWith(".JPEG") || item.ImageVideoPath.EndsWith(".GIF") || item.ImageVideoPath.EndsWith(".TIFF") || item.ImageVideoPath.EndsWith(".jpg") || item.ImageVideoPath.EndsWith(".png") || item.ImageVideoPath.EndsWith(".jpeg") || item.ImageVideoPath.EndsWith(".tiff") || item.ImageVideoPath.EndsWith(".gif"))
                         {
                             <td><img src="~/Image/Services/@item.ImageVideoPath" width="150" /></td>

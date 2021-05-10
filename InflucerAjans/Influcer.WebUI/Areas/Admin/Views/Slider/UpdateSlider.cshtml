@@ -84,3 +84,16 @@
         </div>
     </div>
 </div>
+
+@section scripts{
+    <script src="~/Editor/ckeditor/ckeditor.js"></script>
+    <script src="~/Editor/ckfinder/ckfinder.js"></script>
+    <script type="text/javascript">
+        var editor = CKEDITOR.instances['Content'];
+        if (editor) { editor.destroy(true); }
+        CKEDITOR.replace('Content', {
+            enterMode: CKEDITOR.ENTER_BR,
+        });
+    CKFinder.setupCKEditor(null, '@Url.Content("~/Editor/ckfinder/")');
+    </script>
+}

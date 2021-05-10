@@ -11,11 +11,10 @@
         <table class="data-table table nowrap">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Content</th>
-                    <th>LogoPath</th>
-                    <th>ShortContent</th>
-                    <th>LastDateTime</th>
+                    <th>İsim</th>
+                    <th>Logo</th>
+                    <th>Kısa Açıklama</th>
+                    <th>Son Güncelleme Tarihi</th>
                     <th>Aktif Durumu</th>
                     <th class="datatable-nosort">İşlemler</th>
                 </tr>
@@ -25,7 +24,6 @@
                 {
                 <tr>
                     <td>@item.Name</td>
-                    <td>@item.Content</td>
                     @if (item.LogoPath.EndsWith(".PNG") || item.LogoPath.EndsWith(".JPG") || item.LogoPath.EndsWith(".JPEG") || item.LogoPath.EndsWith(".GIF") || item.LogoPath.EndsWith(".TIFF") || item.LogoPath.EndsWith(".jpg") || item.LogoPath.EndsWith(".png") || item.LogoPath.EndsWith(".jpeg") || item.LogoPath.EndsWith(".tiff") || item.LogoPath.EndsWith(".gif"))
                     {
                         <td><img src="~/Image/Brands/@item.LogoPath" width="150" /></td>

@@ -77,3 +77,5 @@ C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\Influcer.WebUI\obj\Debug\I
 C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\Influcer.WebUI\obj\Debug\Influcer.WebUI.pdb
 C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\Influcer.WebUI\bin\EntityFramework.SqlServer.dll
 C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\Influcer.WebUI\bin\EntityFramework.SqlServer.xml
+C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\Influcer.WebUI\bin\CKFinder.dll
+C:\Users\kadirari\Desktop\InflucerAjans\InflucerAjans\Influcer.WebUI\bin\CKFinder.pdb
