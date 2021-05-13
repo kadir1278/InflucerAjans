@@ -83,5 +83,13 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
             return View(x);
         }
         #endregion
+        #region KullanıcıBilgileri
+        public ActionResult UserMember()
+        {
+            var umL = db.tblUserMembers.ToList();
+            return View(umL);
+        }
+        #endregion
+
     }
 }

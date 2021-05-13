@@ -15,6 +15,8 @@ namespace InflucerEntity.Model
         {
             this.Configuration.LazyLoadingEnabled = false;
         }
+        public DbSet<tblUserMember> tblUserMembers { get; set; }
+
         public DbSet<tblAbout> tblAbouts { get; set; }
         public DbSet<tblAPI> tblAPIs { get; set; }
         public DbSet<tblApplicationForm> tblApplicationForms { get; set; }

@@ -81,6 +81,7 @@
     <Compile Include="Entity\tblLang.cs" />
     <Compile Include="Entity\tblService.cs" />
     <Compile Include="Entity\tblSlider.cs" />
+    <Compile Include="Entity\tblUserMember.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\InfluencerContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1557,6 +1557,7 @@
     <Compile Include="Areas\Admin\Controllers\AboutController.cs" />
     <Compile Include="Areas\Admin\Controllers\APIController.cs" />
     <Compile Include="Areas\Admin\Controllers\ApplicationFormController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AuthorityController.cs" />
     <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
     <Compile Include="Areas\Admin\Controllers\BrandImageController.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
@@ -1565,6 +1566,7 @@
     <Compile Include="Areas\Admin\Controllers\LangController.cs" />
     <Compile Include="Areas\Admin\Controllers\ServiceController.cs" />
     <Compile Include="Areas\Admin\Controllers\SliderController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserMemberController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1716,6 +1718,10 @@
     <Content Include="Editor\ckeditor\skins\moono-lisa\readme.md" />
     <Content Include="Editor\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
     <Content Include="Editor\ckfinder\userfiles\.htaccess" />
+    <Content Include="Areas\Admin\Views\Dashboard\UserMember.cshtml" />
+    <Content Include="Areas\Admin\Views\UserMember\AddUserMember.cshtml" />
+    <Content Include="Areas\Admin\Views\UserMember\UpdateUserMember.cshtml" />
+    <Content Include="Areas\Admin\Views\Authority\Login.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1727,6 +1733,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\AuthorityController\" />
     <Folder Include="Controllers\" />
     <Folder Include="File\ApplicationForms\" />
     <Folder Include="Image\Abouts\" />
