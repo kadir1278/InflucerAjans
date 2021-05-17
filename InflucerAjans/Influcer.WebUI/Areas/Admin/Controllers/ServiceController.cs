@@ -59,6 +59,8 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang");
+
             return View(service);
         }
         [HttpPost, ValidateInput(false)]
@@ -106,6 +108,8 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
                     return RedirectToAction("Service", "Dashboard");
                 }
             }
+            ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang");
+
             return View(service);
         }
         #endregion

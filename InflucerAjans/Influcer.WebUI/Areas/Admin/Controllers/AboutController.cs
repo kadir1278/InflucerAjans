@@ -65,6 +65,8 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang");
+
             return View(about);
         }
         [HttpPost, ValidateInput(false)]
@@ -83,6 +85,7 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
                     var url = Path.Combine(Server.MapPath("~/Image/Abouts/" + photoName));
                     ImageVideoPath.SaveAs(url);
                     AU.Title = about.Title;
+                    AU.LangID = about.LangID;
                     AU.ImageVideoPath = photoName;
                     AU.Content = about.Content;
                     AU.ShortContent = about.ShortContent;
@@ -92,6 +95,8 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
                     return RedirectToAction("About", "Dashboard");
                 }
             }
+            ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang");
+
             return View(about);
         }
         #endregion

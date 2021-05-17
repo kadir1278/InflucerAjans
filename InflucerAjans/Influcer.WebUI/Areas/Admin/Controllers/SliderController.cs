@@ -57,6 +57,8 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang");
+
             return View(slider);
         }
         [HttpPost, ValidateInput(false)]
@@ -78,11 +80,14 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
                     AU.ImageVideoPath = photoName;
                     AU.Content = slider.Content;
                     AU.IsActive = slider.IsActive;
+                    AU.LangID = slider.LangID;
                     AU.LastDateTime = DateTime.Now;
                     db.SaveChanges();
                     return RedirectToAction("Slider", "Dashboard");
                 }
             }
+            ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang");
+
             return View(slider);
         }
         #endregion

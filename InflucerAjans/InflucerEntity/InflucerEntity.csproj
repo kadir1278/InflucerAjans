@@ -75,12 +75,14 @@
     <Compile Include="Entity\tblAPI.cs" />
     <Compile Include="Entity\tblApplicationForm.cs" />
     <Compile Include="Entity\tblBlog.cs" />
-    <Compile Include="Entity\tblBlogDetails.cs" />
+    <Compile Include="Entity\tblBlogDetail.cs" />
     <Compile Include="Entity\tblBrand.cs" />
     <Compile Include="Entity\tblBrandImage.cs" />
     <Compile Include="Entity\tblInfluencer.cs" />
     <Compile Include="Entity\tblInfluencerVideo.cs" />
+    <Compile Include="Entity\tblInNew.cs" />
     <Compile Include="Entity\tblLang.cs" />
+    <Compile Include="Entity\tblMainGoogleSeo.cs" />
     <Compile Include="Entity\tblService.cs" />
     <Compile Include="Entity\tblSlider.cs" />
     <Compile Include="Entity\tblUserMember.cs" />

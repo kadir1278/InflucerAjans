@@ -56,6 +56,8 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang");
+
             return View(about);
         }
         [HttpPost, ValidateInput(false)]
@@ -77,6 +79,7 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
                     AU.Name = about.Name;
                     AU.Surname= about.Surname;
                     AU.City = about.City;
+                    AU.LangID = about.LangID;
                     AU.District = about.District;
                     AU.Address = about.Address;
                     AU.Subject = about.Subject;
@@ -87,6 +90,8 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
                     return RedirectToAction("ApplicationForm", "Dashboard");
                 }
             }
+            ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang");
+
             return View(about);
         }
         #endregion

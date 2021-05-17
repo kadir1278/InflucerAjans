@@ -90,6 +90,32 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
             return View(umL);
         }
         #endregion
+        #region MainGoogleSeo
+        public ActionResult MainGoogleSeo()
+        {
+            var x = db.tblMainGoogleSeos.ToList();
+            return View(x);
+        }
+        #endregion
+        #region Blog
+        public ActionResult Blog()
+        {
+            var x = db.tblBlogs.ToList();
+            return View(x);
+        }
+        public ActionResult BlogDetails()
+        {
+            var x = db.tblBlogDetails.ToList();
+            return View(x);
+        }
+        #endregion
+        #region Basında Biz
+        public ActionResult InNew()
+        {
+            var x = db.tblInNews.ToList();
+            return View(x);
+        }
+        #endregion
 
     }
 }

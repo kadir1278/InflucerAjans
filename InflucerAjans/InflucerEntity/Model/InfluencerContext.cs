@@ -16,7 +16,7 @@ namespace InflucerEntity.Model
             this.Configuration.LazyLoadingEnabled = false;
         }
         public DbSet<tblUserMember> tblUserMembers { get; set; }
-
+        public DbSet<tblInNew> tblInNews { get; set; }
         public DbSet<tblAbout> tblAbouts { get; set; }
         public DbSet<tblAPI> tblAPIs { get; set; }
         public DbSet<tblApplicationForm> tblApplicationForms { get; set; }
@@ -27,6 +27,9 @@ namespace InflucerEntity.Model
         public DbSet<tblLang> tblLangs { get; set; }
         public DbSet<tblService> tblServices { get; set; }
         public DbSet<tblSlider> tblSliders { get; set; }
+        public DbSet<tblBlog>tblBlogs { get; set; }
+        public DbSet<tblBlogDetail>tblBlogDetails { get; set; }
+        public DbSet<tblMainGoogleSeo> tblMainGoogleSeos { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
