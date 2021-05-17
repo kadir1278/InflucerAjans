@@ -17,7 +17,7 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
         #region Create
         public ActionResult AddInfluencerVideo()
         {
-            ViewBag.InfluencerID = new SelectList(db.tblInfluencers.Where(x => x.IsActive == true), "ID", "Name");
+            ViewBag.InfluencerID = new SelectList(db.tblInfluencers.Where(x => x.IsActive == true), "ID", "InfluencerCode");
 
             return View();
         }
@@ -42,7 +42,7 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
                     return RedirectToAction("InfluencerVideo", "Dashboard");
                 }
             }
-            ViewBag.InfluencerID = new SelectList(db.tblInfluencers.Where(x => x.IsActive == true), "ID", "Name");
+            ViewBag.InfluencerID = new SelectList(db.tblInfluencers.Where(x => x.IsActive == true), "ID", "InfluencerCode");
             return View(brand);
         }
         #endregion
@@ -78,6 +78,8 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
                     var url = Path.Combine(Server.MapPath("~/Image/InfluencerVideos/" + photoName));
                     InfluencerVideoPath.SaveAs(url);
                     AU.InfluencerVideoPath = photoName;
+                    AU.Content = brand.Content;
+                    AU.Title = brand.Title;
                     AU.InfluencerID = brand.InfluencerID;
                     AU.IsActive = brand.IsActive;
                     AU.LastDateTime = DateTime.Now;

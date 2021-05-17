@@ -13,5 +13,7 @@ namespace InflucerEntity.Entity
         public string Content { get; set; }
         public string ImageVideoPath { get; set; }
         public string ShortContent { get; set; }
+        public int LangID { get; set; }
+        public tblLang tblLang { get; set; }
     }
 }

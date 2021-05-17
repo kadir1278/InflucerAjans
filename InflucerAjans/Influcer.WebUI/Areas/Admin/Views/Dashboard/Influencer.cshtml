@@ -11,6 +11,7 @@
         <table class="data-table table nowrap">
             <thead>
                 <tr>
+                    <th>Influencer Kod</th>
                     <th>İsim</th>
                     <th>Soyisim</th>
                     <th>İnstagram Adres</th>
@@ -28,6 +29,7 @@
                 @foreach (var item in Model)
                 {
                 <tr>
+                    <td>@item.InfluencerCode</td>
                     <td>@item.Name</td>
                     <td>@item.Surname</td>
                     <td>@item.InstagramAddress</td>

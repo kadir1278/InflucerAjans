@@ -21,19 +21,22 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult AddInfluencer(tblInfluencer brand)
+        public ActionResult AddInfluencer(tblInfluencer Influencer)
         {
-            var MCB = db.tblInfluencers.Where(x => x.ID == brand.LangID).FirstOrDefault();
+
+            var MCB = db.tblInfluencers.Where(x => x.ID == Influencer.LangID).FirstOrDefault();
             if (ModelState.IsValid)
             {
-                    brand.IsActive = true;
-                    brand.LastDateTime = DateTime.Now;
-                    db.tblInfluencers.Add(brand);
-                    db.SaveChanges();
-                    return RedirectToAction("Influencer", "Dashboard");
+
+                Influencer.InfluencerCode = "INF-00" + db.tblInfluencers.Max(x=>x.ID+1);
+                Influencer.IsActive = true;
+                Influencer.LastDateTime = DateTime.Now;
+                db.tblInfluencers.Add(Influencer);
+                db.SaveChanges();
+                return RedirectToAction("Influencer", "Dashboard");
             }
-            ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang", brand.LangID);
-            return View(brand);
+            ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang", Influencer.LangID);
+            return View(Influencer);
         }
         #endregion
         #region Update
@@ -43,51 +46,51 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tblInfluencer brand = db.tblInfluencers.Find(id);
-            if (brand == null)
+            tblInfluencer Influencer = db.tblInfluencers.Find(id);
+            if (Influencer == null)
             {
                 return HttpNotFound();
             }
             ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang");
 
-            return View(brand);
+            return View(Influencer);
         }
         [HttpPost, ValidateInput(false)]
 
-        public ActionResult UpdateInfluencer(int id, tblInfluencer brand)
+        public ActionResult UpdateInfluencer(int id, tblInfluencer Influencer)
         {
             var AU = db.tblInfluencers.Find(id);
             if (ModelState.IsValid)
             {
 
-                AU.Name = brand.Name;
-                AU.Surname = brand.Surname;
-                AU.InstagramAddress = brand.InstagramAddress;
-                AU.TwitterAddress = brand.TwitterAddress;
-                AU.FacebookAddress = brand.FacebookAddress;
-                AU.InstagramFollower = brand.InstagramFollower;
-                AU.TwitterFollower = brand.TwitterFollower;
-                AU.FacebookFollower = brand.FacebookFollower;
-                AU.LangID = brand.LangID;
+                AU.Name = Influencer.Name;
+                AU.Surname = Influencer.Surname;
+                AU.InstagramAddress = Influencer.InstagramAddress;
+                AU.TwitterAddress = Influencer.TwitterAddress;
+                AU.FacebookAddress = Influencer.FacebookAddress;
+                AU.InstagramFollower = Influencer.InstagramFollower;
+                AU.TwitterFollower = Influencer.TwitterFollower;
+                AU.FacebookFollower = Influencer.FacebookFollower;
+                AU.LangID = Influencer.LangID;
                 #region seo
-                AU.seoTitle = brand.seoTitle;
-                AU.seoKeywords = brand.seoKeywords;
-                AU.seoDescription = brand.seoDescription;
-                AU.seoAuthor = brand.seoAuthor;
-                AU.seoCopyright = brand.seoCopyright;
-                AU.seoDesign = brand.seoDesign;
-                AU.seoReply = brand.seoReply;
-                AU.seoSubject = brand.seoSubject;
-                AU.seoTwitterDescription = brand.seoTwitterDescription;
-                AU.seoTwitterKeywords = brand.seoTwitterKeywords;
-                AU.seoTwitterTitle = brand.seoTwitterTitle;
-                AU.seoTwitterUrl = brand.seoTwitterUrl;
-                AU.seoFacebookDescription = brand.seoFacebookDescription;
-                AU.seoFacebookKeywrods = brand.seoFacebookKeywrods;
-                AU.seoFacebookTitle = brand.seoFacebookTitle;
-                AU.seoFacebookUrl = brand.seoFacebookUrl;
+                AU.seoTitle = Influencer.seoTitle;
+                AU.seoKeywords = Influencer.seoKeywords;
+                AU.seoDescription = Influencer.seoDescription;
+                AU.seoAuthor = Influencer.seoAuthor;
+                AU.seoCopyright = Influencer.seoCopyright;
+                AU.seoDesign = Influencer.seoDesign;
+                AU.seoReply = Influencer.seoReply;
+                AU.seoSubject = Influencer.seoSubject;
+                AU.seoTwitterDescription = Influencer.seoTwitterDescription;
+                AU.seoTwitterKeywords = Influencer.seoTwitterKeywords;
+                AU.seoTwitterTitle = Influencer.seoTwitterTitle;
+                AU.seoTwitterUrl = Influencer.seoTwitterUrl;
+                AU.seoFacebookDescription = Influencer.seoFacebookDescription;
+                AU.seoFacebookKeywrods = Influencer.seoFacebookKeywrods;
+                AU.seoFacebookTitle = Influencer.seoFacebookTitle;
+                AU.seoFacebookUrl = Influencer.seoFacebookUrl;
                 #endregion
-                AU.IsActive = brand.IsActive;
+                AU.IsActive = Influencer.IsActive;
                 AU.LastDateTime = DateTime.Now;
                 db.SaveChanges();
                 return RedirectToAction("Influencer", "Dashboard");
@@ -95,14 +98,14 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
 
             ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang");
 
-            return View(brand);
+            return View(Influencer);
         }
         #endregion
         #region Delete
         public ActionResult DeleteInfluencer(int ID)
         {
-            tblInfluencer brand = db.tblInfluencers.Where(x => x.ID == ID).SingleOrDefault();
-            db.tblInfluencers.Remove(brand);
+            tblInfluencer Influencer = db.tblInfluencers.Where(x => x.ID == ID).SingleOrDefault();
+            db.tblInfluencers.Remove(Influencer);
             db.SaveChanges();
             return RedirectToAction("Influencer", "Dashboard");
         }

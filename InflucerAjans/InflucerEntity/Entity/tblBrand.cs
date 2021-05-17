@@ -13,14 +13,14 @@ namespace InflucerEntity.Entity
         {
             this.tblBrandImages = new HashSet<tblBrandImage>();
             this.tblAPIs = new HashSet<tblAPI>();
-            this.tblLangs = new HashSet<tblLang>();
         }
         public string Name { get; set; }
         public string Content { get; set; }
         public string LogoPath { get; set; }
         public string ShortContent { get; set; }
+        public int LangID { get; set; }
+        public tblLang tblLang { get; set; }
 
-        public virtual ICollection<tblLang> tblLangs { get; set; }
 
         public virtual ICollection<tblBrandImage> tblBrandImages { get; set; }
         public virtual ICollection<tblAPI> tblAPIs { get; set; }

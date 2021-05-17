@@ -16,6 +16,8 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
         #region Create
         public ActionResult AddApplicationForm()
         {
+            ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang");
+
             return View();
         }
         [HttpPost]
@@ -37,6 +39,8 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
                     return RedirectToAction("ApplicationForm", "Dashboard");
                 }
             }
+            ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang");
+
             return View(API);
         }
         #endregion

@@ -9,6 +9,8 @@ namespace InflucerEntity.Entity
 {
     public class tblInfluencerVideo:LittleEntity
     {
+        public string Title { get; set; }
+        public string Content { get; set; }
         public string InfluencerVideoPath { get; set; }
         public int InfluencerID { get; set; }
         public tblInfluencer tblInfluencer { get; set; }

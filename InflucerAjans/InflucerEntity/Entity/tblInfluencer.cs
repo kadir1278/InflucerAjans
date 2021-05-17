@@ -13,6 +13,7 @@ namespace InflucerEntity.Entity
         {
             this.tblInfluencerVideos = new HashSet<tblInfluencerVideo>();
         }
+        public string InfluencerCode { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string InstagramAddress { get; set; }
@@ -21,6 +22,8 @@ namespace InflucerEntity.Entity
         public int InstagramFollower { get; set; }
         public int FacebookFollower { get; set; }
         public int TwitterFollower { get; set; }
+        public int LangID { get; set; }
+        public tblLang tblLang { get; set; }
 
         public virtual ICollection<tblInfluencerVideo> tblInfluencerVideos { get; set; }
 

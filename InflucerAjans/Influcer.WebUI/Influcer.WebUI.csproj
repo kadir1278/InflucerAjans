@@ -1733,7 +1733,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\AuthorityController\" />
     <Folder Include="Controllers\" />
     <Folder Include="File\ApplicationForms\" />
     <Folder Include="Image\Abouts\" />

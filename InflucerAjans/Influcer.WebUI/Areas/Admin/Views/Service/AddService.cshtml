@@ -72,7 +72,7 @@
                     <div class="form-group">
                         <label class="control-label col-md-2">Kısa Açıklama</label>
                         <div class="col-md-12">
-                            <input type="text" name="ShortContent" class="form-control" required placeholder="Lütfen Kısa Açıklama Giriniz" maxlength="110" />
+                            @Html.TextAreaFor(model => model.ShortContent, new { @class = "form-control", style = "width:100%" })
                             @Html.ValidationMessageFor(model => model.ShortContent, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -206,6 +206,13 @@
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Dil</label>
+                        <div class="col-md-12">
+                            @Html.DropDownList("LangID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.LangID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">

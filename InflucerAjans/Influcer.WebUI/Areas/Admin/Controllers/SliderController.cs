@@ -16,6 +16,8 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
         #region Create
         public ActionResult AddSlider()
         {
+            ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang");
+
             return View();
         }
         [HttpPost]
@@ -38,6 +40,8 @@ namespace Influcer.WebUI.Areas.Admin.Controllers
 
                 }
             }
+            ViewBag.LangID = new SelectList(db.tblLangs.Where(x => x.IsActive == true), "ID", "Lang");
+
             return View(slider);
         }
         #endregion
