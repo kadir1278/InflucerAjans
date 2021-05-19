@@ -1,7 +1,7 @@
 ﻿using Influencer.Entities.Entity;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using System.Data.Entity;   
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
@@ -21,6 +21,7 @@ namespace Influencer.Entities.Model
         public DbSet<API> APIs { get; set; }
         public DbSet<ApplicationForm> ApplicationForms { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<BlogCategory> BlogCategories { get; set; }
         public DbSet<BrandImage> BrandImages { get; set; }
         public DbSet<Inflencer> Inflencers { get; set; }
         public DbSet<InfluencerVideo> InfluencerVideos { get; set; }

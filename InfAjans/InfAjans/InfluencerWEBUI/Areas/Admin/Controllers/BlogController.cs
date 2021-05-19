@@ -76,7 +76,6 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     var url = Path.Combine(Server.MapPath("~/Image/Blogs/" + photoName));
                     File.SaveAs(url);
                     AU.Title = Blog.Title;
-                    AU.LangTableID = Blog.LangTableID;
                     AU.File = photoName;
                     AU.Content = Blog.Content;
                     AU.ShortContent = Blog.ShortContent;

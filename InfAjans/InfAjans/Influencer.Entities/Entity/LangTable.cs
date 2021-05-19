@@ -17,7 +17,7 @@ namespace Influencer.Entities.Entity
             this.Brands = new HashSet<Brand>();
             this.ApplicationForms = new HashSet<ApplicationForm>();
             this.Abouts = new HashSet<About>();
-            this.Blogs = new HashSet<Blog>();
+            this.BlogCategories = new HashSet<BlogCategory>();
             this.InNews = new HashSet<InNew>();
             this.MainGoogleSeos = new HashSet<MainGoogleSeo>();
 
@@ -37,6 +37,6 @@ namespace Influencer.Entities.Entity
         public virtual ICollection<Brand> Brands { get; set; }
         public virtual ICollection<ApplicationForm> ApplicationForms{get; set;}
         public virtual ICollection<About> Abouts { get; set; }
-        public virtual ICollection<Blog> Blogs { get; set; }
+        public virtual ICollection<BlogCategory> BlogCategories { get; set; }
     }
 }

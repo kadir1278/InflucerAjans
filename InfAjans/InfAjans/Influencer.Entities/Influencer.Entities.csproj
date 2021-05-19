@@ -54,6 +54,7 @@
     <Compile Include="Entity\API.cs" />
     <Compile Include="Entity\ApplicationForm.cs" />
     <Compile Include="Entity\Blog.cs" />
+    <Compile Include="Entity\BlogCategory.cs" />
     <Compile Include="Entity\BlogDetail.cs" />
     <Compile Include="Entity\Brand.cs" />
     <Compile Include="Entity\BrandImage.cs" />

@@ -13,8 +13,8 @@ namespace Influencer.Entities.Entity
         public string Content { get; set; }
         public string File { get; set; }
         public string ShortContent { get; set; }
-        public int LangTableID { get; set; }
-        public LangTable LangTable { get; set; }
+        public int BlogCategoryID { get; set; }
+        public BlogCategory BlogCategory { get; set; }
 
     }
 }
