@@ -20,3 +20,17 @@ C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\ob
 C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.CopyComplete
 C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.dll
 C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.pdb
+C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\Influencer.Entities.dll.config
+C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\Influencer.Entities.dll
+C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\Influencer.Entities.pdb
+C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csprojAssemblyReference.cache
+C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.CopyComplete
+C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.dll
+C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.pdb
+C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.Migrations.init.resources
+C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.GenerateResource.cache

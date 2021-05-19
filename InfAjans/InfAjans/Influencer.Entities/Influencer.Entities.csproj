@@ -67,6 +67,10 @@
     <Compile Include="Entity\Service.cs" />
     <Compile Include="Entity\Slider.cs" />
     <Compile Include="Entity\UserMember.cs" />
+    <Compile Include="Migrations\202105192311064_init.cs" />
+    <Compile Include="Migrations\202105192311064_init.Designer.cs">
+      <DependentUpon>202105192311064_init.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\InfluencerContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,6 +79,10 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202105192311064_init.resx">
+      <DependentUpon>202105192311064_init.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
