@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Influencer.Entities", "Influencer.Entities\Influencer.Entities.csproj", "{7F817E6F-B084-48D3-A528-97F123AADE34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfluencerWEBUI", "InfluencerWEBUI\InfluencerWEBUI.csproj", "{EDB56894-5ED4-42CE-BF26-02D76ED91B34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F817E6F-B084-48D3-A528-97F123AADE34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F817E6F-B084-48D3-A528-97F123AADE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F817E6F-B084-48D3-A528-97F123AADE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F817E6F-B084-48D3-A528-97F123AADE34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDB56894-5ED4-42CE-BF26-02D76ED91B34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDB56894-5ED4-42CE-BF26-02D76ED91B34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDB56894-5ED4-42CE-BF26-02D76ED91B34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDB56894-5ED4-42CE-BF26-02D76ED91B34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65BF39CD-E4BC-4D39-AFB4-B9CC7039C085}
+	EndGlobalSection
+EndGlobal
