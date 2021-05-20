@@ -1643,6 +1643,7 @@
     <Compile Include="Areas\Admin\Controllers\MainSliderController.cs" />
     <Compile Include="Areas\Admin\Controllers\ServiceController.cs" />
     <Compile Include="Areas\Admin\Controllers\SliderController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SocialMediaController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserMemberController.cs" />
     <Compile Include="Controllers\AnasayfaController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1832,6 +1833,9 @@
     <Content Include="Content\Site\Source\OwlCarousel2-2.3.4_2.zip" />
     <Content Include="Content\Site\Source\sass.zip" />
     <Content Include="Content\Site\Source\SlickNav-master.zip" />
+    <Content Include="Areas\Admin\Views\SocialMedia\AddSocialMedia.cshtml" />
+    <Content Include="Areas\Admin\Views\SocialMedia\UpdateSocialMedia.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\SocialMedia.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

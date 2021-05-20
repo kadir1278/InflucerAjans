@@ -32,6 +32,7 @@ namespace Influencer.Entities.Model
         public DbSet<BlogDetail> BlogDetails { get; set; }
         public DbSet<MainGoogleSeo> MainGoogleSeos { get; set; }
         public DbSet<MainSlider> MainSliders { get; set; }
+        public DbSet<SocialMedia> SocialMedias{ get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

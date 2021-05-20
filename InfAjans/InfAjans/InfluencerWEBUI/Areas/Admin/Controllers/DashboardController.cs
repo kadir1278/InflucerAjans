@@ -127,6 +127,13 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
             return View(x);
         }
         #endregion
+        #region Sosyal Medya
+        public ActionResult SocialMedia()
+        {
+            var x = db.SocialMedias.ToList();
+            return View(x);
+        }
+        #endregion
 
     }
 }
