@@ -14,9 +14,19 @@ namespace InfluencerWEBUI
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                name: "TurkishAnasayfa",
+                url: "tr/",
+                defaults: new { controller = "Anasayfa", action = "TR"/*, id = UrlParameter.Optional*/ }
+            );
+            routes.MapRoute(
+                name: "TurkishAnasayfa2",
+                url: "",
+                defaults: new { controller = "Anasayfa", action = "TR"/*, id = UrlParameter.Optional*/ }
+            );
+            routes.MapRoute(
+                name: "ENAnasayfa",
+                url: "en/",
+                defaults: new { controller = "Anasayfa", action = "EN"/*, id = UrlParameter.Optional*/ }
             );
         }
     }
