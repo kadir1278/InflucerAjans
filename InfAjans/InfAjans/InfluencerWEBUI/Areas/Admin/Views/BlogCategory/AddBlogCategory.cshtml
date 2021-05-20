@@ -1,7 +1,7 @@
-﻿@model Influencer.Entities.Entity.Blog
+﻿@model Influencer.Entities.Entity.BlogCategory
 
 @{
-    ViewBag.Title = "AddBlog";
+    ViewBag.Title = "AddBlogCategory";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-12">
                     <div class="title">
-                        <h3>Yeni Blog Ekle</h3>
+                        <h3>Yeni Blog Kategori Ekle</h3>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 text-right">
@@ -34,11 +34,11 @@
         <div class="pd-20 card-box mb-30">
             <div class="clearfix">
                 <div class="pull-left">
-                    <h4 class="text-blue h4">Yeni Blog Ekle</h4>
+                    <h4 class="text-blue h4">Yeni Blog Kategori Ekle</h4>
                 </div>
             </div>
             <!-- Buraya Form Kısmını Ekle -->
-            @using (Html.BeginForm("AddBlog", "Blog", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            @using (Html.BeginForm("AddBlogCategory", "BlogCategory", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
                 @Html.AntiForgeryToken()
 
@@ -56,31 +56,15 @@
                     <div class="form-group">
                         <label class="control-label col-md-2">İçerik</label>
                         <div class="col-md-12">
-                            @Html.TextAreaFor(model => model.Content)
-                            @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-md-2">Resim</label>
-                        <div class="col-md-12">
-                            <input type="file" name="File" required class="form-control" />
-                            @Html.ValidationMessageFor(model => model.File, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-md-2">Kısa Açıklama</label>
-                        <div class="col-md-12">
-                            @Html.TextAreaFor(model => model.ShortContent, new { @class = "form-control", style = "width:100%" })
-                            @Html.ValidationMessageFor(model => model.ShortContent, "", new { @class = "text-danger" })
+                            @Html.TextAreaFor(model => model.Description, new { @class = "form-control", style = "width:100%" })
+                            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-2">Blog Kategori</label>
+                        <label class="control-label col-md-2">Dil</label>
                         <div class="col-md-12">
-                            @Html.DropDownList("BlogCategoryID", null, htmlAttributes: new { @class = "form-control" })
-                            @Html.ValidationMessageFor(model => model.BlogCategoryID, "", new { @class = "text-danger" })
+                            @Html.DropDownList("LangTableID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.LangTableID, "", new { @class = "text-danger" })
                         </div>
                     </div>
 
@@ -88,8 +72,8 @@
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
                             <div class="col-md-offset-2 col-md-10">
-                                <button type="submit" class="btn btn-outline-success"><i class="fa fa-check"></i> Yeni Blog Ekle</button>
-                                <a href="/Admin/Dashboard/Blog" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Listeye Geri Dön</a>
+                                <button type="submit" class="btn btn-outline-success"><i class="fa fa-check"></i> Yeni Blog Kategori Ekle</button>
+                                <a href="/Admin/Dashboard/BlogCategory" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Listeye Geri Dön</a>
                             </div>
                         </div>
                     </div>
@@ -100,16 +84,3 @@
     </div>
 </div>
 
-
-@section scripts{
-    <script src="~/Editor/ckeditor/ckeditor.js"></script>
-    <script src="~/Editor/ckfinder/ckfinder.js"></script>
-    <script type="text/javascript">
-        var editor = CKEDITOR.instances['Content'];
-        if (editor) { editor.destroy(true); }
-        CKEDITOR.replace('Content', {
-            enterMode: CKEDITOR.ENTER_BR,
-        });
-    CKFinder.setupCKEditor(null, '@Url.Content("~/Editor/ckfinder/")');
-    </script>
-}

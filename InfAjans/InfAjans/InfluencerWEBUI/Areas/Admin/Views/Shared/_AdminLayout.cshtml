@@ -1,8 +1,8 @@
-﻿@if (Session["AdminGiris"] == null)
+﻿@*@if (Session["AdminGiris"] == null)
 {
     Response.Redirect("/Admin/Authority/Login");
 
-}
+}*@
 @{
     var kullanicilar = Session["AdminGiris"] as Influencer.Entities.Entity.UserMember;
 }
@@ -146,6 +146,8 @@
                             <span class="micon dw dw-analytics-5"></span><span class="mtext">Blog Ayarları</span>
                         </a>
                         <ul class="submenu">
+                            <li> <a href="/Admin/Dashboard/BlogCategory">Blog Kategori Listele</a></li>
+                            <li> <a href="/Admin/BlogCategory/AddBlogCategory">Blog Kategori Ekle</a></li>
                             <li> <a href="/Admin/Dashboard/Blog">Blog Listele</a></li>
                             <li> <a href="/Admin/Blog/AddBlog">Blog Ekle</a></li>
                             <li> <a href="/Admin/Dashboard/BlogDetails">Blog Detay Listele</a></li>

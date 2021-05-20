@@ -16,8 +16,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
         #region Create
         public ActionResult AddBlog()
         {
-            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName");
-
+            ViewBag.BlogCategoryID = new SelectList(db.BlogCategories.Where(x => x.IsActive == true), "ID", "Title");
             return View();
         }
         [HttpPost]
@@ -39,7 +38,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     return RedirectToAction("Blog", "Dashboard");
                 }
             }
-            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName");
+            ViewBag.BlogCategoryID = new SelectList(db.BlogCategories.Where(x => x.IsActive == true), "ID", "Title");
 
             return View(Blog);
         }
@@ -56,7 +55,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName");
+
+            ViewBag.BlogCategoryID = new SelectList(db.BlogCategories.Where(x => x.IsActive == true), "ID", "Title");
 
             return View(Blog);
         }
@@ -85,7 +85,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     return RedirectToAction("Blog", "Dashboard");
                 }
             }
-            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName");
+
+            ViewBag.BlogCategoryID = new SelectList(db.BlogCategories.Where(x => x.IsActive == true), "ID", "Title");
 
             return View(Blog);
         }

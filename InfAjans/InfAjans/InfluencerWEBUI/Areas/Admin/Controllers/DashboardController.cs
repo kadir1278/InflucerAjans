@@ -89,7 +89,6 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
             return View(x);
         }
         #endregion
-
         #region KullanıcıBilgileri
         public ActionResult UserMember()
         {
@@ -105,6 +104,11 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
         }
         #endregion
         #region Blog
+        public ActionResult BlogCategory()
+        {
+            var x = db.BlogCategories.ToList();
+            return View(x);
+        }
         public ActionResult Blog()
         {
             var x = db.Blogs.ToList();

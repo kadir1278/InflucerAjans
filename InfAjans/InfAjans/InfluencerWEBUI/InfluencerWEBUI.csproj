@@ -1550,21 +1550,6 @@
     <Content Include="Editor\ckfinder\_samples\standalone.html" />
     <Content Include="Editor\ckfinder\_samples\standalone_v1.html" />
     <Content Include="Global.asax" />
-    <Content Include="Image\Abouts\9b949cb9-a2ed-4e7c-8e06-9d740bd4d2d8180x180-M.png" />
-    <Content Include="Image\BlogDetails\53fc3085-ed74-4967-a382-744f00db39a7IMG-20191209-WA0008.jpeg" />
-    <Content Include="Image\BlogDetails\5adfec79-720e-4dc3-91ad-eb051f867efbIMG-20191210-WA0000.jpeg" />
-    <Content Include="Image\Blogs\7300034f-3944-4d17-9784-da6d51be05b0IMG-20191209-WA0008.jpeg" />
-    <Content Include="Image\Brands\07ff459f-ae43-46a1-be20-a414c84bc58bNewLogo.png" />
-    <Content Include="Image\Brands\2b82a61c-561b-4b8f-baf3-25244ac3a970NewLogo.png" />
-    <Content Include="Image\Brands\9fb66ee8-14b6-4023-b8f8-947c3815f023NewLogo.png" />
-    <Content Include="Image\Brands\acc8d393-0ef5-4a09-9283-b05afd7a9dedNewLogo.png" />
-    <Content Include="Image\InfluencerVideos\4d9be47a-0de7-412a-be14-ed81ca899b24IMG-20210428-WA0023.jpg" />
-    <Content Include="Image\InfluencerVideos\dcc28d83-bb1b-48fb-ae50-5ca29794f07aNewLogo.png" />
-    <Content Include="Image\Services\819231de-7cc6-4668-8c09-cbdf920054e9NewLogo.png" />
-    <Content Include="Image\Services\853c49fd-aa78-4f98-9074-be8d2c0ce31016x16-M.PNG" />
-    <Content Include="Image\Sliders\362790cf-31af-43af-8f10-35296133fdb4NewLogo.png" />
-    <Content Include="Image\Sliders\8138eb18-7355-401a-a14a-717bfee2aa03WhatsApp_Image_2021-05-17_at_11.52.00.jpeg" />
-    <Content Include="Image\Sliders\d6dde7e1-42ab-41b8-8441-db1c5b1a8c80180x180-M.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1574,12 +1559,12 @@
     <Compile Include="Areas\Admin\Controllers\APIController.cs" />
     <Compile Include="Areas\Admin\Controllers\ApplicationFormController.cs" />
     <Compile Include="Areas\Admin\Controllers\AuthorityController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BlogCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\BlogController.cs" />
     <Compile Include="Areas\Admin\Controllers\BlogDetailsController.cs" />
     <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
     <Compile Include="Areas\Admin\Controllers\BrandImageController.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
-    <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
     <Compile Include="Areas\Admin\Controllers\InfluencerController.cs" />
     <Compile Include="Areas\Admin\Controllers\InfluencerVideoController.cs" />
     <Compile Include="Areas\Admin\Controllers\InNewController.cs" />
@@ -1760,6 +1745,9 @@
     <Content Include="Editor\ckeditor\skins\moono-lisa\readme.md" />
     <Content Include="Editor\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
     <Content Include="Editor\ckfinder\userfiles\.htaccess" />
+    <Content Include="Areas\Admin\Views\Dashboard\BlogCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\BlogCategory\AddBlogCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\BlogCategory\UpdateBlogCategory.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1771,11 +1759,17 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\Default\" />
     <Folder Include="Controllers\" />
     <Folder Include="File\ApplicationForms\" />
+    <Folder Include="Image\Abouts\" />
+    <Folder Include="Image\BlogDetails\" />
+    <Folder Include="Image\Blogs\" />
+    <Folder Include="Image\Brands\" />
     <Folder Include="Image\Finder\images\" />
+    <Folder Include="Image\InfluencerVideos\" />
     <Folder Include="Image\InNews\" />
+    <Folder Include="Image\Services\" />
+    <Folder Include="Image\Sliders\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
