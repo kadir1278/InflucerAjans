@@ -38,6 +38,21 @@ namespace InfluencerWEBUI
                 url: "en/about",
                 defaults: new { controller = "Hakkimizda", action = "EN"/*, id = UrlParameter.Optional*/ }
             );
+            routes.MapRoute(
+                name: "TR/Servisler",
+                url: "tr/servislerimiz",
+                defaults: new { controller = "Servisler", action = "TR"/*, id = UrlParameter.Optional*/ }
+            );
+            routes.MapRoute(
+                name: "EN/Servisler",
+                url: "en/services",
+                defaults: new { controller = "Servisler", action = "EN"/*, id = UrlParameter.Optional*/ }
+            );
+            routes.MapRoute(
+                name: "TR/ServislerDetay",
+                url: "tr/servislerimiz/{SeoLink}",
+                defaults: new { controller = "Servisler", action = "TR", SeoLink = UrlParameter.Optional }
+            );
         }
     }
 }

@@ -1647,6 +1647,8 @@
     <Compile Include="Areas\Admin\Controllers\UserMemberController.cs" />
     <Compile Include="Controllers\AnasayfaController.cs" />
     <Compile Include="Controllers\HakkimizdaController.cs" />
+    <Compile Include="Controllers\ServisDetayController.cs" />
+    <Compile Include="Controllers\ServislerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1845,6 +1847,7 @@
     <Content Include="Views\Anasayfa\EN.cshtml" />
     <Content Include="Views\Hakkimizda\TR.cshtml" />
     <Content Include="Views\Hakkimizda\EN.cshtml" />
+    <Content Include="Views\Servisler\TR.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1867,6 +1870,7 @@
     <Folder Include="Image\Services\" />
     <Folder Include="Image\Sliders\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\ServisDetay\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Influencer.Entities\Influencer.Entities.csproj">
