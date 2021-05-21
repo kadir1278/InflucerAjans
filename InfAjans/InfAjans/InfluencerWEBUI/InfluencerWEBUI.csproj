@@ -1861,6 +1861,7 @@
     <Folder Include="Image\Blogs\" />
     <Folder Include="Image\Brands\" />
     <Folder Include="Image\Finder\images\" />
+    <Folder Include="Image\Influencers\" />
     <Folder Include="Image\InfluencerVideos\" />
     <Folder Include="Image\InNews\" />
     <Folder Include="Image\Services\" />

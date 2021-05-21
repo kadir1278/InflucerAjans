@@ -22,6 +22,8 @@ namespace Influencer.Entities.Entity
         public int InstagramFollower { get; set; }
         public int FacebookFollower { get; set; }
         public int TwitterFollower { get; set; }
+        public string File { get; set; }
+        public string Content { get; set; }
         public int LangTableID { get; set; }
         public LangTable LangTable { get; set; }
 
