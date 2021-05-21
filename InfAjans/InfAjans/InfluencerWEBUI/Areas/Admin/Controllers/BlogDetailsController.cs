@@ -1,4 +1,5 @@
-﻿using Influencer.Entities.Entity;
+﻿using CNR.WEBUI.Content.Helper;
+using Influencer.Entities.Entity;
 using Influencer.Entities.Model;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,6 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
         [ValidateInput(false)]
         public ActionResult AddBlogDetails(BlogDetail BlogDetail, HttpPostedFileBase File)
         {
-            var AA = db.BlogDetails.Count();
             if (ModelState.IsValid)
             {
 
@@ -34,6 +34,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     BlogDetail.File = photoName;
                     BlogDetail.IsActive = true;
                     BlogDetail.LastDateTime = DateTime.Now;
+                    BlogDetail.Slug = StringHelper.StringReplacer(BlogDetail.Title.ToLower());
+
                     db.BlogDetails.Add(BlogDetail);
                     db.SaveChanges();
                     return RedirectToAction("BlogDetails", "Dashboard");
@@ -76,6 +78,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     AU.Content = BlogDetail.Content;
                     AU.ShortContent = BlogDetail.ShortContent;
                     AU.IsActive = BlogDetail.IsActive;
+                    AU.Slug = StringHelper.StringReplacer(BlogDetail.Title.ToLower());
+
                     AU.LastDateTime = DateTime.Now;
                     db.SaveChanges();
                     return RedirectToAction("BlogDetails", "Dashboard");

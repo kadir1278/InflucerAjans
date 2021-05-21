@@ -9,17 +9,6 @@ C:\Users\kadirari\Desktop\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influe
 C:\Users\kadirari\Desktop\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.CopyComplete
 C:\Users\kadirari\Desktop\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.dll
 C:\Users\kadirari\Desktop\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.pdb
-C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\Influencer.Entities.dll.config
-C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\Influencer.Entities.dll
-C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\Influencer.Entities.pdb
-C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.dll
-C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.xml
-C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.CoreCompileInputs.cache
-C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.CopyComplete
-C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.dll
-C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.pdb
 C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\Influencer.Entities.dll.config
 C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\Influencer.Entities.dll
 C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\Influencer.Entities.pdb
@@ -34,7 +23,17 @@ C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.
 C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.pdb
 C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.Migrations.init.resources
 C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.GenerateResource.cache
-C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csprojAssemblyReference.cache
+C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\Influencer.Entities.dll.config
+C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\Influencer.Entities.dll
+C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\Influencer.Entities.pdb
+C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.dll
+C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.xml
+C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.Migrations.init.resources
-C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.GenerateResource.cache
 C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.Migrations.init1.resources
+C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.GenerateResource.cache
+C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.CoreCompileInputs.cache
+C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.CopyComplete
+C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.dll
+C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.pdb

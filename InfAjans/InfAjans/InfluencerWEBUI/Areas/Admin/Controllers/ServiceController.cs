@@ -1,4 +1,5 @@
-﻿using Influencer.Entities.Entity;
+﻿using CNR.WEBUI.Content.Helper;
+using Influencer.Entities.Entity;
 using Influencer.Entities.Model;
 using System;
 using System.Collections.Generic;
@@ -27,20 +28,22 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
             var AA = db.Services.Count();
             if (ModelState.IsValid)
             {
-                
-                    if (ImageVideoPath != null)
-                    {
-                        string photoName = Path.GetFileName(Guid.NewGuid().ToString() + ImageVideoPath.FileName);
-                        var url = Path.Combine(Server.MapPath("~/Image/Services/" + photoName));
-                        ImageVideoPath.SaveAs(url);
-                        service.ImageVideoPath = photoName;
-                        service.IsActive = true;
-                        service.LastDateTime = DateTime.Now;
-                        db.Services.Add(service);
-                        db.SaveChanges();
-                        return RedirectToAction("Service", "Dashboard");
-                    }
-                
+
+                if (ImageVideoPath != null)
+                {
+                    string photoName = Path.GetFileName(Guid.NewGuid().ToString() + ImageVideoPath.FileName);
+                    var url = Path.Combine(Server.MapPath("~/Image/Services/" + photoName));
+                    ImageVideoPath.SaveAs(url);
+                    service.ImageVideoPath = photoName;
+                    service.IsActive = true;
+                    service.Slug = StringHelper.StringReplacer(service.Title.ToLower());
+
+                    service.LastDateTime = DateTime.Now;
+                    db.Services.Add(service);
+                    db.SaveChanges();
+                    return RedirectToAction("Service", "Dashboard");
+                }
+
             }
             ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName");
 
@@ -80,6 +83,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     ImageVideoPath.SaveAs(url);
                     AU.Title = service.Title;
                     AU.ImageVideoPath = photoName;
+                    AU.Slug = StringHelper.StringReplacer(service.Title.ToLower());
+
                     AU.Content = service.Content;
                     AU.ShortContent = service.ShortContent;
                     AU.LangTableID = service.LangTableID;

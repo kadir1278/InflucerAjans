@@ -1,4 +1,5 @@
-﻿using Influencer.Entities.Entity;
+﻿using CNR.WEBUI.Content.Helper;
+using Influencer.Entities.Entity;
 using Influencer.Entities.Model;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                social.Slug = StringHelper.StringReplacer(social.Title.ToLower());
+
                 social.IsActive = true;
                 social.LastDateTime = DateTime.Now;
                 db.SocialMedias.Add(social);
@@ -56,6 +59,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                 AU.Title = social.Title;
                 AU.Icon = social.Icon;
                 AU.URL = social.URL;
+                AU.Slug = StringHelper.StringReplacer(social.Title.ToLower());
+
                 AU.IsActive = social.IsActive;
                 AU.LastDateTime = DateTime.Now;
                 db.SaveChanges();

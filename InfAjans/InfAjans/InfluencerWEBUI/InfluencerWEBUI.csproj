@@ -1645,6 +1645,8 @@
     <Compile Include="Areas\Admin\Controllers\SliderController.cs" />
     <Compile Include="Areas\Admin\Controllers\SocialMediaController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserMemberController.cs" />
+    <Compile Include="Content\HelperClasses\LogInfo.cs" />
+    <Compile Include="Content\Helper\StringHelper.cs" />
     <Compile Include="Controllers\AnasayfaController.cs" />
     <Compile Include="Controllers\HakkimizdaController.cs" />
     <Compile Include="Controllers\ServisDetayController.cs" />

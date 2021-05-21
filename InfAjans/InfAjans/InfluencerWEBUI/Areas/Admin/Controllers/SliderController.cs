@@ -1,4 +1,5 @@
-﻿using Influencer.Entities.Entity;
+﻿using CNR.WEBUI.Content.Helper;
+using Influencer.Entities.Entity;
 using Influencer.Entities.Model;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     ImageVideoPath.SaveAs(url);
                     slider.ImageVideoPath = photoName;
                     slider.IsActive = true;
+                    slider.Slug = StringHelper.StringReplacer(slider.Title.ToLower());
+
                     slider.LastDateTime = DateTime.Now;
                     db.Sliders.Add(slider);
                     db.SaveChanges();
@@ -83,6 +86,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     AU.ImageVideoPath = photoName;
                     AU.Content = slider.Content;
                     AU.IsActive = slider.IsActive;
+                    AU.Slug = StringHelper.StringReplacer(slider.Title.ToLower());
+
                     AU.LastDateTime = DateTime.Now;
                     db.SaveChanges();
                     return RedirectToAction("Slider", "Dashboard");

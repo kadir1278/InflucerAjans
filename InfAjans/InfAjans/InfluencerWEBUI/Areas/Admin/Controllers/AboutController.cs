@@ -1,4 +1,5 @@
-﻿using Influencer.Entities.Entity;
+﻿using CNR.WEBUI.Content.Helper;
+using Influencer.Entities.Entity;
 using Influencer.Entities.Model;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                         ImageVideoPath.SaveAs(url);
                         about.ImageVideoPath = photoName;
                         about.IsActive = true;
+                        about.Slug = StringHelper.StringReplacer(about.Title.ToLower());
                         about.LastDateTime = DateTime.Now;
                         db.Abouts.Add(about);
                         db.SaveChanges();
@@ -88,6 +90,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     AU.LangTableID = about.LangTableID;
                     AU.ImageVideoPath = photoName;
                     AU.Content = about.Content;
+                    AU.Slug = StringHelper.StringReplacer(about.Title.ToLower());
                     AU.ShortContent = about.ShortContent;
                     AU.IsActive = about.IsActive;
                     AU.LastDateTime = DateTime.Now;

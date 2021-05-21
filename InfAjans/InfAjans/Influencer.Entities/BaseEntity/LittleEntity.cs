@@ -15,5 +15,6 @@ namespace Influencer.Entities.BaseEntity
         public int ID { get; set; }
         public DateTime LastDateTime { get; set; }
         public bool IsActive { get; set; }
+        public string Slug { get; set; }
     }
 }

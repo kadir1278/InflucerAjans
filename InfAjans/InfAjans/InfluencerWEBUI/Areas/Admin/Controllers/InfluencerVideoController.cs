@@ -1,4 +1,5 @@
-﻿using Influencer.Entities.Entity;
+﻿using CNR.WEBUI.Content.Helper;
+using Influencer.Entities.Entity;
 using Influencer.Entities.Model;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     brand.InfluencerVideoPath = photoName;
                     brand.IsActive = true;
                     brand.LastDateTime = DateTime.Now;
+                    brand.Slug = StringHelper.StringReplacer(brand.Title.ToLower());
+
                     db.InfluencerVideos.Add(brand);
                     db.SaveChanges();
                     return RedirectToAction("InfluencerVideo", "Dashboard");
@@ -83,6 +86,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     AU.InfluencerID = brand.InfluencerID;
                     AU.IsActive = brand.IsActive;
                     AU.LastDateTime = DateTime.Now;
+                    AU.Slug = StringHelper.StringReplacer(brand.Title.ToLower());
+
                     db.SaveChanges();
                     return RedirectToAction("InfluencerVideo", "Dashboard");
                 }

@@ -1,4 +1,5 @@
-﻿using Influencer.Entities.Entity;
+﻿using CNR.WEBUI.Content.Helper;
+using Influencer.Entities.Entity;
 using Influencer.Entities.Model;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
             {
                 MainSlider.IsActive = true;
                 MainSlider.LastDateTime = DateTime.Now;
+                MainSlider.Slug = StringHelper.StringReplacer(MainSlider.Title.ToLower());
+
                 db.MainSliders.Add(MainSlider);
                 db.SaveChanges();
                 return RedirectToAction("MainSlider", "Dashboard");
@@ -64,6 +67,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                 AU.Description = MainSlider.Description;
                 AU.IsActive = MainSlider.IsActive;
                 AU.LangTableID = MainSlider.LangTableID;
+                AU.Slug = StringHelper.StringReplacer(MainSlider.Title.ToLower());
+
                 AU.LastDateTime = DateTime.Now;
                 db.SaveChanges();
                 return RedirectToAction("MainSlider", "Dashboard");

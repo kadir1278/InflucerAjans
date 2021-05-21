@@ -1,4 +1,5 @@
-﻿using Influencer.Entities.Entity;
+﻿using CNR.WEBUI.Content.Helper;
+using Influencer.Entities.Entity;
 using Influencer.Entities.Model;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     InNew.Image = photoName;
                     InNew.IsActive = true;
                     InNew.LastDateTime = DateTime.Now;
+                    InNew.Slug = StringHelper.StringReplacer(InNew.Title.ToLower());
+
                     db.InNews.Add(InNew);
                     db.SaveChanges();
                     return RedirectToAction("InNew", "Dashboard");
@@ -78,6 +81,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     AU.Image = photoName;
 
                 }
+                AU.Slug = StringHelper.StringReplacer(InNew.Title.ToLower());
 
                 AU.Title = InNew.Title;
                 AU.Content = InNew.Content;

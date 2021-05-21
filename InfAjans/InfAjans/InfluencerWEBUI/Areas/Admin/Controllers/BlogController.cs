@@ -1,4 +1,5 @@
-﻿using Influencer.Entities.Entity;
+﻿using CNR.WEBUI.Content.Helper;
+using Influencer.Entities.Entity;
 using Influencer.Entities.Model;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     Blog.File = photoName;
                     Blog.IsActive = true;
                     Blog.LastDateTime = DateTime.Now;
+                    Blog.Slug = StringHelper.StringReplacer(Blog.Title.ToLower());
+
                     db.Blogs.Add(Blog);
                     db.SaveChanges();
                     return RedirectToAction("Blog", "Dashboard");

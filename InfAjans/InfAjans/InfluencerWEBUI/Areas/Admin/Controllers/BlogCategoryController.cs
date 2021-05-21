@@ -1,4 +1,5 @@
-﻿using Influencer.Entities.Entity;
+﻿using CNR.WEBUI.Content.Helper;
+using Influencer.Entities.Entity;
 using Influencer.Entities.Model;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
             {
                 BlogCategory.IsActive = true;
                 BlogCategory.LastDateTime = DateTime.Now;
+                BlogCategory.Slug = StringHelper.StringReplacer(BlogCategory.Title.ToLower());
+
                 db.BlogCategories.Add(BlogCategory);
                 db.SaveChanges();
                 return RedirectToAction("BlogCategory", "Dashboard");
@@ -64,6 +67,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                 AU.Description = BlogCategory.Description;
                 AU.IsActive = BlogCategory.IsActive;
                 AU.LastDateTime = DateTime.Now;
+                AU.Slug = StringHelper.StringReplacer(BlogCategory.Title.ToLower());
+
                 db.SaveChanges();
                 return RedirectToAction("BlogCategory", "Dashboard");
 

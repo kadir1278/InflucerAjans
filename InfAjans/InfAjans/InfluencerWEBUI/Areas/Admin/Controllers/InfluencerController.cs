@@ -1,4 +1,5 @@
-﻿using Influencer.Entities.Entity;
+﻿using CNR.WEBUI.Content.Helper;
+using Influencer.Entities.Entity;
 using Influencer.Entities.Model;
 using System;
 using System.Collections.Generic;
@@ -42,6 +43,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     }
                     Influencer.IsActive = true;
                     Influencer.LastDateTime = DateTime.Now;
+                    Influencer.Slug = StringHelper.StringReplacer(Influencer.Name.ToLower());
+
                     db.Inflencers.Add(Influencer);
                     db.SaveChanges();
                     return RedirectToAction("Influencer", "Dashboard");
@@ -114,6 +117,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     #endregion
                     AU.IsActive = Influencer.IsActive;
                     AU.LastDateTime = DateTime.Now;
+                    AU.Slug = StringHelper.StringReplacer(Influencer.Name.ToLower());
+
                     db.SaveChanges();
                     return RedirectToAction("Influencer", "Dashboard");
                 }

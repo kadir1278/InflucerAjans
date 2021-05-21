@@ -1,4 +1,5 @@
-﻿using Influencer.Entities.Entity;
+﻿using CNR.WEBUI.Content.Helper;
+using Influencer.Entities.Entity;
 using Influencer.Entities.Model;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,8 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     brand.LogoPath = photoName;
                     brand.IsActive = true;
                     brand.LastDateTime = DateTime.Now;
+                    brand.Slug = StringHelper.StringReplacer(brand.Name.ToLower());
+
                     db.Brands.Add(brand);
                     db.SaveChanges();
                     return RedirectToAction("Brand", "Dashboard");
@@ -98,6 +101,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     AU.seoFacebookTitle = brand.seoFacebookTitle;
                     AU.seoFacebookUrl = brand.seoFacebookUrl;
                     #endregion
+                    AU.Slug = StringHelper.StringReplacer(brand.Name.ToLower());
 
                     AU.ShortContent = brand.ShortContent;
                     AU.IsActive = brand.IsActive;
