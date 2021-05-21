@@ -1646,6 +1646,7 @@
     <Compile Include="Areas\Admin\Controllers\SocialMediaController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserMemberController.cs" />
     <Compile Include="Controllers\AnasayfaController.cs" />
+    <Compile Include="Controllers\HakkimizdaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1842,6 +1843,8 @@
     <Content Include="Views\Anasayfa\TR.cshtml" />
     <Content Include="Views\Shared\En\_Layout.cshtml" />
     <Content Include="Views\Anasayfa\EN.cshtml" />
+    <Content Include="Views\Hakkimizda\TR.cshtml" />
+    <Content Include="Views\Hakkimizda\EN.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

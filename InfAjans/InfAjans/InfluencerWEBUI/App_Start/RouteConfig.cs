@@ -28,6 +28,16 @@ namespace InfluencerWEBUI
                 url: "en/",
                 defaults: new { controller = "Anasayfa", action = "EN"/*, id = UrlParameter.Optional*/ }
             );
+            routes.MapRoute(
+                name: "TurkishHakkimizda",
+                url: "tr/hakkimizda",
+                defaults: new { controller = "Hakkimizda", action = "TR"/*, id = UrlParameter.Optional*/ }
+            );
+            routes.MapRoute(
+                name: "ENHakkimizda",
+                url: "en/about",
+                defaults: new { controller = "Hakkimizda", action = "EN"/*, id = UrlParameter.Optional*/ }
+            );
         }
     }
 }

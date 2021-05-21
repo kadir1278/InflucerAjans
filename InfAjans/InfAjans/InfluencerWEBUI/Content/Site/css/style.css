@@ -828,17 +828,36 @@ ol {
 .services-item {
 	margin: 0 auto 70px;
 }
+.services-item2 {
+	margin: 0 auto 70px;
+}
 
 .services-item img {
 	margin-bottom: 30px;
 }
-
+.services-item2 i{
+	font-size:50px;
+	color:white;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+	margin-bottom:30px;
+}
+.services-item i {
+	font-size: 60px;
+	color: #000000;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 30px;
+}
 .services-item h4 {
 	margin-bottom: 20px;
 }
 
 .services-item p {
 	margin-bottom: 0;
+	text-align:left;
 }
 
 .instagram-section {
@@ -857,7 +876,8 @@ ol {
 ---------------------*/
 
 .portfolio-section {
-	padding-top: 120px;
+	padding-top: 0px;
+	margin-bottom:30px;
 }
 
 .portfolio-filter {
