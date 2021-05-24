@@ -1850,6 +1850,8 @@
     <Content Include="Views\Hakkimizda\TR.cshtml" />
     <Content Include="Views\Hakkimizda\EN.cshtml" />
     <Content Include="Views\Servisler\TR.cshtml" />
+    <Content Include="Views\ServisDetay\EN.cshtml" />
+    <Content Include="Views\Servisler\EN.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1872,7 +1874,6 @@
     <Folder Include="Image\Services\" />
     <Folder Include="Image\Sliders\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\ServisDetay\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Influencer.Entities\Influencer.Entities.csproj">

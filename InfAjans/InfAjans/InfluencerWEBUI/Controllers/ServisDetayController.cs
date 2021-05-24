@@ -14,10 +14,14 @@ namespace InfluencerWEBUI.Controllers
         #region TR
         public ActionResult TR(string SeoLink)
         {
-            return View(db.Services.Where(x=>x.Title==SeoLink).FirstOrDefault());
+            return View(db.Services.Where(x=>x.Slug==SeoLink).FirstOrDefault());
         }
         #endregion
         #region EN
+        public ActionResult EN(string SeoLink)
+        {
+            return View(db.Services.Where(x => x.Slug == SeoLink).FirstOrDefault());
+        }
         #endregion
     }
 }
