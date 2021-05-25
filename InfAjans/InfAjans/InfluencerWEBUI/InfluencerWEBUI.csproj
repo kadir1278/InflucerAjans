@@ -1648,7 +1648,9 @@
     <Compile Include="Content\HelperClasses\LogInfo.cs" />
     <Compile Include="Content\Helper\StringHelper.cs" />
     <Compile Include="Controllers\AnasayfaController.cs" />
+    <Compile Include="Controllers\CozumOrtaklarimizController.cs" />
     <Compile Include="Controllers\HakkimizdaController.cs" />
+    <Compile Include="Controllers\InfluencersController.cs" />
     <Compile Include="Controllers\ServisDetayController.cs" />
     <Compile Include="Controllers\ServislerController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1852,6 +1854,8 @@
     <Content Include="Views\Servisler\TR.cshtml" />
     <Content Include="Views\ServisDetay\EN.cshtml" />
     <Content Include="Views\Servisler\EN.cshtml" />
+    <Content Include="Views\ServisDetay\TR.cshtml" />
+    <Content Include="Views\Influencers\TR.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1874,6 +1878,7 @@
     <Folder Include="Image\Services\" />
     <Folder Include="Image\Sliders\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\CozumOrtaklarimiz\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Influencer.Entities\Influencer.Entities.csproj">

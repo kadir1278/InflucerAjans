@@ -39,19 +39,29 @@ namespace InfluencerWEBUI
                 defaults: new { controller = "Hakkimizda", action = "EN"/*, id = UrlParameter.Optional*/ }
             );
             routes.MapRoute(
-                name: "TR/Servisler",
+                name: "TRServisler",
                 url: "tr/servislerimiz",
                 defaults: new { controller = "Servisler", action = "TR"/*, id = UrlParameter.Optional*/ }
             );
             routes.MapRoute(
-                name: "EN/Servisler",
+                name: "ENServisler",
                 url: "en/services",
-                defaults: new { controller = "Servisler", action = "EN"/*, id = UrlParameter.Optional*/ }
+                defaults: new { controller = "ServisDetay", action = "EN"/*, id = UrlParameter.Optional*/ }
             );
             routes.MapRoute(
-                name: "TR/ServislerDetay",
+                name: "TRServislerDetay",
                 url: "tr/servislerimiz/{SeoLink}",
-                defaults: new { controller = "Servisler", action = "TR", SeoLink = UrlParameter.Optional }
+                defaults: new { controller = "ServisDetay", action = "TR", SeoLink = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "ENInfluencers",
+                url: "en/influencers",
+                defaults: new { controller = "Influencers", action = "EN"/*, id = UrlParameter.Optional*/ }
+            );
+            routes.MapRoute(
+                name: "TRInfluencerlar",
+                url: "tr/influencerlarimiz",
+                defaults: new { controller = "Influencers", action = "TR"/*, id = UrlParameter.Optional*/ }
             );
         }
     }
