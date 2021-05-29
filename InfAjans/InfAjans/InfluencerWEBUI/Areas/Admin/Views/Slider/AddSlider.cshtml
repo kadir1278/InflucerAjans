@@ -67,7 +67,14 @@
                     @Html.ValidationMessageFor(model => model.ImageVideoPath, "", new { @class = "text-danger" })
                 </div>
             </div>
-           
+            <div class="form-group">
+                <label class="control-label col-md-2">Sıra</label>
+                <div class="col-md-12">
+                    <input type="number" name="Rank" class="form-control" required placeholder="Lütfen Slider İçin Resim Sırası Giriniz. 1 2 3 4 5 gibi rakamlar giriniz." maxlength="3" />
+                    @Html.ValidationMessageFor(model => model.Rank, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
             <div class="form-group">
                 <label class="control-label col-md-2">Ana Slider</label>
                 <div class="col-md-12">

@@ -86,6 +86,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     AU.ImageVideoPath = photoName;
                     AU.Content = slider.Content;
                     AU.IsActive = slider.IsActive;
+                    AU.Rank = slider.Rank;
                     AU.Slug = StringHelper.StringReplacer(slider.Title.ToLower());
 
                     AU.LastDateTime = DateTime.Now;

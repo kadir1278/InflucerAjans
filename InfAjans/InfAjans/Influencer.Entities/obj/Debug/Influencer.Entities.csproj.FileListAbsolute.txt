@@ -38,3 +38,18 @@ C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\ob
 C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.dll
 C:\Users\kadirari\Desktop\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.pdb
 C:\Users\Meka Softech\Desktop\GitHub\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.Migrations.init1.resources
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\Influencer.Entities.dll.config
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\Influencer.Entities.dll
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\Influencer.Entities.pdb
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.dll
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.xml
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.AssemblyReference.cache
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.Migrations.init.resources
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.Migrations.init1.resources
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.GenerateResource.cache
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.CoreCompileInputs.cache
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.csproj.CopyComplete
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.dll
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Debug\Influencer.Entities.pdb

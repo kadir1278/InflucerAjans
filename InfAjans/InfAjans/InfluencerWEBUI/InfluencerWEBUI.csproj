@@ -1856,6 +1856,10 @@
     <Content Include="Views\Servisler\EN.cshtml" />
     <Content Include="Views\ServisDetay\TR.cshtml" />
     <Content Include="Views\Influencers\TR.cshtml" />
+    <Content Include="Views\Anasayfa\TRPartialSliderList.cshtml" />
+    <Content Include="Views\Anasayfa\ENPartialSliderList.cshtml" />
+    <Content Include="Views\Anasayfa\TRPartialAbout.cshtml" />
+    <Content Include="Views\Anasayfa\ENPartialAbout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

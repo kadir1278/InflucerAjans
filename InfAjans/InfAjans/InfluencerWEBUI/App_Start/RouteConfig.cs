@@ -13,6 +13,7 @@ namespace InfluencerWEBUI
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            #region View
             routes.MapRoute(
                 name: "TurkishAnasayfa",
                 url: "tr/",
@@ -55,14 +56,37 @@ namespace InfluencerWEBUI
             );
             routes.MapRoute(
                 name: "ENInfluencers",
-                url: "en/influencers",
+                url: "en/our-managers",
                 defaults: new { controller = "Influencers", action = "EN"/*, id = UrlParameter.Optional*/ }
             );
             routes.MapRoute(
                 name: "TRInfluencerlar",
-                url: "tr/influencerlarimiz",
+                url: "tr/menajerlerimiz",
                 defaults: new { controller = "Influencers", action = "TR"/*, id = UrlParameter.Optional*/ }
             );
+            #endregion
+            #region PartialView
+            routes.MapRoute(
+               name: "TRPartialSliderList",
+               url: "TRPartialSliderList",
+               defaults: new { controller = "Anasayfa", action = "TRPartialSliderList"/*, id = UrlParameter.Optional*/ }
+           );
+            routes.MapRoute(
+               name: "TRPartialAbout",
+               url: "TRPartialAbout",
+               defaults: new { controller = "Anasayfa", action = "TRPartialAbout"/*, id = UrlParameter.Optional*/ }
+           );
+            routes.MapRoute(
+               name: "ENPartialSliderList",
+               url: "ENPartialSliderList",
+               defaults: new { controller = "Anasayfa", action = "ENPartialSliderList"/*, id = UrlParameter.Optional*/ }
+           );
+            routes.MapRoute(
+               name: "ENPartialAbout",
+               url: "ENPartialAbout",
+               defaults: new { controller = "Anasayfa", action = "ENPartialAbout"/*, id = UrlParameter.Optional*/ }
+           );
+            #endregion
         }
     }
 }

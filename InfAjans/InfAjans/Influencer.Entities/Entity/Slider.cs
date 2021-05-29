@@ -12,7 +12,8 @@ namespace Influencer.Entities.Entity
         public string Title { get; set; }
         public string Content { get; set; }
         public string ImageVideoPath { get; set; }
-     
+        public int Rank { get; set; }
+
         public int MainSliderID { get; set; }
         public MainSlider MainSlider { get; set; }
     }
