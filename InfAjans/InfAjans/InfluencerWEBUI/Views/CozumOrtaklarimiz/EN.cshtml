@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Influencer.Entities.Entity.Brand>
+@{
+    ViewBag.Title = "EN";
+    Layout = "~/Views/Shared/En/_Layout.cshtml";
+}
+<div class="portfolio-section">
+    <div class="row portfolio-gallery m-0">
+        @foreach (var item in Model)
+        {
+            <div class="mix col-xl-3 col-md-3 col-sm-4 col-6 p-0 nature">
+                <a href="~/Image/brands/@item.LogoPath" class="portfolio-item img-popup set-bg" data-setbg="/Image/brands/@item.LogoPath"></a>
+            </div>
+        }
+    </div>
+</div>

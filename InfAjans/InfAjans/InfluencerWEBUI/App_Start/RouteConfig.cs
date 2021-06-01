@@ -65,6 +65,11 @@ namespace InfluencerWEBUI
                 defaults: new { controller = "Influencers", action = "EN"/*, id = UrlParameter.Optional*/ }
             );
             routes.MapRoute(
+                name: "TRInfluencers",
+                url: "tr/menajerlerimiz",
+                defaults: new { controller = "Influencers", action = "TR"/*, id = UrlParameter.Optional*/ }
+            );
+            routes.MapRoute(
                 name: "TRCozumOrtaklarimiz",
                 url: "tr/cozum-ortaklarimiz",
                 defaults: new { controller = "CozumOrtaklarimiz", action = "TR"/*, id = UrlParameter.Optional*/ }

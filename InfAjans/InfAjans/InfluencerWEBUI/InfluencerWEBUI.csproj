@@ -1868,6 +1868,7 @@
     <Content Include="Views\Anasayfa\ENPartialServiceList.cshtml" />
     <Content Include="Views\Influencers\EN.cshtml" />
     <Content Include="Views\CozumOrtaklarimiz\TR.cshtml" />
+    <Content Include="Views\CozumOrtaklarimiz\EN.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
