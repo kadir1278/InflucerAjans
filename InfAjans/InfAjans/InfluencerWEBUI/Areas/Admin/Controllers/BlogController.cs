@@ -41,8 +41,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     return RedirectToAction("Blog", "Dashboard");
                 }
             }
-            ViewBag.BlogCategoryID = new SelectList(db.BlogCategories.Where(x => x.IsActive == true), "ID", "Title");
-
+            ViewBag.BlogCategoryID = new SelectList(db.BlogCategories.Where(x => x.IsActive == true), "ID", "Title", Blog.BlogCategoryID);
             return View(Blog);
         }
         #endregion
@@ -59,7 +58,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                 return HttpNotFound();
             }
 
-            ViewBag.BlogCategoryID = new SelectList(db.BlogCategories.Where(x => x.IsActive == true), "ID", "Title");
+            ViewBag.BlogCategoryID = new SelectList(db.BlogCategories.Where(x => x.IsActive == true), "ID", "Title",Blog.BlogCategoryID);
 
             return View(Blog);
         }
@@ -88,9 +87,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     return RedirectToAction("Blog", "Dashboard");
                 }
             }
-
-            ViewBag.BlogCategoryID = new SelectList(db.BlogCategories.Where(x => x.IsActive == true), "ID", "Title");
-
+            ViewBag.BlogCategoryID = new SelectList(db.BlogCategories.Where(x => x.IsActive == true), "ID", "Title", Blog.BlogCategoryID);
             return View(Blog);
         }
         #endregion

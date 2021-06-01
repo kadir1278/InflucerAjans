@@ -51,9 +51,9 @@
             </div>
 
             <div class="form-group">
-                <label class="control-label col-md-2">Resim Video</label>
+                <label class="control-label col-md-2">Resim</label>
                 <div class="col-md-12">
-                    <input type="file" name="ImageVideoPath" required class="form-control" />
+                    <input type="file" name="ImageVideoPath" class="form-control" />
                     @Html.ValidationMessageFor(model => model.ImageVideoPath, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -81,6 +81,40 @@
                     </div>
                 </div>
             </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Sayfa URL</label>
+                <div class="col-md-12">
+                    <select class="custom-select2 form-control" name="Icon" required style="width: 100%; height: 38px;">
+                        <optgroup label="Lütfen Sayfanızı Seçiniz...">
+                            <option value="fa fa-area-chart">Alan Grafik</option>
+                            <option value="fa fa-line-chart">Çizgi Grafik</option>
+                            <option value="fa fa-bar-chart">Grafik Çubuğu</option>
+                            <option value="fa fa-pie-chart">Yuvarlak Diyagram</option>
+                            <option value="fa fa-file">Dosya</option>
+                            <option value="fa fa-wifi">Wifi</option>
+                            <option value="fa fa-universtiy">Bina</option>
+                            <option value="fa fa-space-suttle">Uzay Mekiği</option>
+                            <option value="fa fa-search-plus">Arama</option>
+                            <option value="fa fa-commenting">Yorum Balonu</option>
+                            <option value="fa fa-calendar">Takvim</option>
+                            <option value="fa fa-book">Kitap</option>
+                            <option value="fa fa-briefcase">Evrak Çantası</option>
+                            <option value="fa fa-bluetooth">Bluetooth</option>
+                            <option value="fa fa-newspaper-o">Gazete</option>
+                            <option value="fa fa-id-card">Kimlik Kartı</option>
+                            <option value="fa fa-hourglass">Kum Saati</option>
+                            <option value="fa fa-file">Dosya</option>
+                            <option value="fa fa-envelope">Mail</option>
+                            <option value="fa fa-cubes">Küpler</option>
+                            <option value="fa fa-hangshake-o">Tokalaşma</option>
+                        </optgroup>
+                    </select>
+                    @Html.ValidationMessageFor(model => model.Icon, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
             <!-- seo start-->
             <div class="form-group">
                 <label class="control-label col-md-2">Seo Başlık</label>

@@ -81,37 +81,36 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     string photoName = Path.GetFileName(Guid.NewGuid().ToString() + ImageVideoPath.FileName);
                     var url = Path.Combine(Server.MapPath("~/Image/Services/" + photoName));
                     ImageVideoPath.SaveAs(url);
-                    AU.Title = service.Title;
                     AU.ImageVideoPath = photoName;
-                    AU.Slug = StringHelper.StringReplacer(service.Title.ToLower());
-
-                    AU.Content = service.Content;
-                    AU.ShortContent = service.ShortContent;
-                    AU.LangTableID = service.LangTableID;
-                    #region seo
-                    AU.seoTitle = service.seoTitle;
-                    AU.seoKeywords = service.seoKeywords;
-                    AU.seoDescription = service.seoDescription;
-                    AU.seoAuthor = service.seoAuthor;
-                    AU.seoCopyright = service.seoCopyright;
-                    AU.seoDesign = service.seoDesign;
-                    AU.seoReply = service.seoReply;
-                    AU.seoSubject = service.seoSubject;
-                    AU.seoTwitterDescription = service.seoTwitterDescription;
-                    AU.seoTwitterKeywords = service.seoTwitterKeywords;
-                    AU.seoTwitterTitle = service.seoTwitterTitle;
-                    AU.seoTwitterUrl = service.seoTwitterUrl;
-                    AU.seoFacebookDescription = service.seoFacebookDescription;
-                    AU.seoFacebookKeywrods = service.seoFacebookKeywrods;
-                    AU.seoFacebookTitle = service.seoFacebookTitle;
-                    AU.seoFacebookUrl = service.seoFacebookUrl;
-                    #endregion
-
-                    AU.IsActive = service.IsActive;
-                    AU.LastDateTime = DateTime.Now;
-                    db.SaveChanges();
-                    return RedirectToAction("Service", "Dashboard");
                 }
+                AU.Title = service.Title;
+                AU.Slug = StringHelper.StringReplacer(service.Title.ToLower());
+                AU.Content = service.Content;
+                AU.ShortContent = service.ShortContent;
+                AU.LangTableID = service.LangTableID;
+                #region seo
+                AU.seoTitle = service.seoTitle;
+                AU.seoKeywords = service.seoKeywords;
+                AU.seoDescription = service.seoDescription;
+                AU.seoAuthor = service.seoAuthor;
+                AU.seoCopyright = service.seoCopyright;
+                AU.seoDesign = service.seoDesign;
+                AU.seoReply = service.seoReply;
+                AU.seoSubject = service.seoSubject;
+                AU.seoTwitterDescription = service.seoTwitterDescription;
+                AU.seoTwitterKeywords = service.seoTwitterKeywords;
+                AU.seoTwitterTitle = service.seoTwitterTitle;
+                AU.seoTwitterUrl = service.seoTwitterUrl;
+                AU.seoFacebookDescription = service.seoFacebookDescription;
+                AU.seoFacebookKeywrods = service.seoFacebookKeywrods;
+                AU.seoFacebookTitle = service.seoFacebookTitle;
+                AU.seoFacebookUrl = service.seoFacebookUrl;
+                #endregion
+
+                AU.IsActive = service.IsActive;
+                AU.LastDateTime = DateTime.Now;
+                db.SaveChanges();
+                return RedirectToAction("Service", "Dashboard");
             }
             ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName");
 

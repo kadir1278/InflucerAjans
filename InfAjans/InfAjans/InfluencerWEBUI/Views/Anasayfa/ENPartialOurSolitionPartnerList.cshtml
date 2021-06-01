@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Influencer.Entities.Entity.Brand>
+<div class="portfolio-section">
+    <div class="section-title">
+        <h3>Our Solution Partners</h3>
+        <hr />
+    </div>
+    <div class="row portfolio-gallery m-0">
+        @foreach (var item in Model)
+        {
+            <div class="mix col-xl-3 col-md-3 col-sm-4 col-6 p-0 nature">
+                <a href="~/Image/brands/@item.LogoPath" class="portfolio-item img-popup set-bg" data-setbg="/Image/brands/@item.LogoPath"></a>
+            </div>
+        }
+    </div>
+    <div class="text-center mb-3">
+        <a href="#" class="site-btn">See More <i class="fa fa-arrow-circle-o-right"></i></a>
+    </div>
+</div>

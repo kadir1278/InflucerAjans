@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Influencer.Entities.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,16 +9,17 @@ namespace InfluencerWEBUI.Controllers
 {
     public class InfluencersController : Controller
     {
+        private InfluencerContext db = new InfluencerContext();
         #region TR
         public ActionResult TR()
         {
-            return View();
+            return View(db.Inflencers.Where(x => x.IsActive == true && x.LangTableID == 1).ToList().OrderBy(x => x.Name + " " + x.Surname));
         }
         #endregion
         #region EN
         public ActionResult EN()
         {
-            return View();
+            return View(db.Inflencers.Where(x => x.IsActive == true && x.LangTableID == 2).ToList().OrderBy(x => x.Name + " " + x.Surname));
         }
         #endregion
     }

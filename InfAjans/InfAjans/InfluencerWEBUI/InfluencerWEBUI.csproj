@@ -631,6 +631,8 @@
     <Content Include="Areas\Admin\Context\mekasoftware\MiniLogo.png" />
     <Content Include="Areas\Admin\Context\mekasoftware\NewLogo.png" />
     <Content Include="Areas\Admin\Context\mekasoftware\pdf.png" />
+    <Content Include="Content\Site\barchart.png" />
+    <Content Include="Content\Site\cubes.png" />
     <Content Include="Content\Site\logooENG.png" />
     <Content Include="Content\Site\css\bootstrap.min.css" />
     <Content Include="Content\Site\css\font-awesome.min.css" />
@@ -702,6 +704,7 @@
     <Content Include="Content\Site\neon-2.jpg" />
     <Content Include="Content\Site\Source\photo credits - photographer.txt" />
     <Content Include="Content\Site\TR.PNG" />
+    <Content Include="Content\Site\users-icon.png" />
     <Content Include="Editor\ckeditor\adapters\jquery.js" />
     <Content Include="Editor\ckeditor\build-config.js" />
     <Content Include="Editor\ckeditor\ckeditor.js" />
@@ -1633,7 +1636,6 @@
     <Compile Include="Areas\Admin\Controllers\BlogController.cs" />
     <Compile Include="Areas\Admin\Controllers\BlogDetailsController.cs" />
     <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
-    <Compile Include="Areas\Admin\Controllers\BrandImageController.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Admin\Controllers\InfluencerController.cs" />
     <Compile Include="Areas\Admin\Controllers\InfluencerVideoController.cs" />
@@ -1860,6 +1862,12 @@
     <Content Include="Views\Anasayfa\ENPartialSliderList.cshtml" />
     <Content Include="Views\Anasayfa\TRPartialAbout.cshtml" />
     <Content Include="Views\Anasayfa\ENPartialAbout.cshtml" />
+    <Content Include="Views\Anasayfa\TRPartialServiceList.cshtml" />
+    <Content Include="Views\Anasayfa\TRPartialOurSolitionPartnerList.cshtml" />
+    <Content Include="Views\Anasayfa\ENPartialOurSolitionPartnerList.cshtml" />
+    <Content Include="Views\Anasayfa\ENPartialServiceList.cshtml" />
+    <Content Include="Views\Influencers\EN.cshtml" />
+    <Content Include="Views\CozumOrtaklarimiz\TR.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1882,7 +1890,6 @@
     <Folder Include="Image\Services\" />
     <Folder Include="Image\Sliders\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\CozumOrtaklarimiz\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Influencer.Entities\Influencer.Entities.csproj">

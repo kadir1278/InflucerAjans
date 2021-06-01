@@ -13,6 +13,7 @@ namespace Influencer.Entities.Entity
         public string Content { get; set; }
         public string ImageVideoPath { get; set; }
         public string ShortContent { get; set; }
+        public string Icon { get; set; }
         public int LangTableID { get; set; }
         public LangTable LangTable { get; set; }
     }

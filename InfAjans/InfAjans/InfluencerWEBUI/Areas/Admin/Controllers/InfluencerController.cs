@@ -50,7 +50,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     return RedirectToAction("Influencer", "Dashboard");
                 }
             }
-            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName");
+            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName", Influencer.LangTableID);
 
             return View(Influencer);
         }
@@ -67,7 +67,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName");
+            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName", Influencer.LangTableID);
 
             return View(Influencer);
         }
@@ -86,46 +86,45 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     }
                     string photoName = Path.GetFileName(Guid.NewGuid().ToString() + File.FileName);
                     var url = Path.Combine(Server.MapPath("~/Image/Influencers/" + photoName));
-                    AU.Name = Influencer.Name;
-                    AU.Surname = Influencer.Surname;
-                    AU.InstagramAddress = Influencer.InstagramAddress;
-                    AU.TwitterAddress = Influencer.TwitterAddress;
-                    AU.FacebookAddress = Influencer.FacebookAddress;
-                    AU.InstagramFollower = Influencer.InstagramFollower;
-                    AU.TwitterFollower = Influencer.TwitterFollower;
-                    AU.FacebookFollower = Influencer.FacebookFollower;
-                    AU.LangTableID = Influencer.LangTableID;
-                    AU.Content = Influencer.Content;
                     AU.File = photoName;
-                    #region seo
-                    AU.seoTitle = Influencer.seoTitle;
-                    AU.seoKeywords = Influencer.seoKeywords;
-                    AU.seoDescription = Influencer.seoDescription;
-                    AU.seoAuthor = Influencer.seoAuthor;
-                    AU.seoCopyright = Influencer.seoCopyright;
-                    AU.seoDesign = Influencer.seoDesign;
-                    AU.seoReply = Influencer.seoReply;
-                    AU.seoSubject = Influencer.seoSubject;
-                    AU.seoTwitterDescription = Influencer.seoTwitterDescription;
-                    AU.seoTwitterKeywords = Influencer.seoTwitterKeywords;
-                    AU.seoTwitterTitle = Influencer.seoTwitterTitle;
-                    AU.seoTwitterUrl = Influencer.seoTwitterUrl;
-                    AU.seoFacebookDescription = Influencer.seoFacebookDescription;
-                    AU.seoFacebookKeywrods = Influencer.seoFacebookKeywrods;
-                    AU.seoFacebookTitle = Influencer.seoFacebookTitle;
-                    AU.seoFacebookUrl = Influencer.seoFacebookUrl;
-                    #endregion
-                    AU.IsActive = Influencer.IsActive;
-                    AU.LastDateTime = DateTime.Now;
-                    AU.Slug = StringHelper.StringReplacer(Influencer.Name.ToLower());
-
-                    db.SaveChanges();
-                    return RedirectToAction("Influencer", "Dashboard");
                 }
+                AU.Name = Influencer.Name;
+                AU.Surname = Influencer.Surname;
+                AU.InstagramAddress = Influencer.InstagramAddress;
+                AU.TwitterAddress = Influencer.TwitterAddress;
+                AU.FacebookAddress = Influencer.FacebookAddress;
+                AU.InstagramFollower = Influencer.InstagramFollower;
+                AU.TwitterFollower = Influencer.TwitterFollower;
+                AU.FacebookFollower = Influencer.FacebookFollower;
+                AU.LangTableID = Influencer.LangTableID;
+                AU.Content = Influencer.Content;
+                #region seo
+                AU.seoTitle = Influencer.seoTitle;
+                AU.seoKeywords = Influencer.seoKeywords;
+                AU.seoDescription = Influencer.seoDescription;
+                AU.seoAuthor = Influencer.seoAuthor;
+                AU.seoCopyright = Influencer.seoCopyright;
+                AU.seoDesign = Influencer.seoDesign;
+                AU.seoReply = Influencer.seoReply;
+                AU.seoSubject = Influencer.seoSubject;
+                AU.seoTwitterDescription = Influencer.seoTwitterDescription;
+                AU.seoTwitterKeywords = Influencer.seoTwitterKeywords;
+                AU.seoTwitterTitle = Influencer.seoTwitterTitle;
+                AU.seoTwitterUrl = Influencer.seoTwitterUrl;
+                AU.seoFacebookDescription = Influencer.seoFacebookDescription;
+                AU.seoFacebookKeywrods = Influencer.seoFacebookKeywrods;
+                AU.seoFacebookTitle = Influencer.seoFacebookTitle;
+                AU.seoFacebookUrl = Influencer.seoFacebookUrl;
+                #endregion
+                AU.IsActive = Influencer.IsActive;
+                AU.LastDateTime = DateTime.Now;
+                AU.Slug = StringHelper.StringReplacer(Influencer.Name.ToLower());
 
+                db.SaveChanges();
+                return RedirectToAction("Influencer", "Dashboard");
             }
 
-            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName");
+            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName",Influencer.LangTableID);
 
             return View(Influencer);
         }

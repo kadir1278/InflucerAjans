@@ -20,7 +20,7 @@ namespace InfluencerWEBUI.Controllers
         #region EN
         public ActionResult EN()
         {
-            return View();
+            return View(db.Abouts.Where(x => x.IsActive == true && x.LangTableID == 2).FirstOrDefault());
         }
         #endregion
     }

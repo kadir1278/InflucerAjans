@@ -1,5 +1,17 @@
-﻿
+﻿@model Influencer.Entities.Entity.Service
 @{
-    ViewBag.Title = "Servis Detay";
+    ViewBag.Title = Model.Title;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="servis-detay mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="~/Image/Services/@Model.ImageVideoPath" alt="@Model.Title" />
+                <hr />
+                <h1>@Model.Title</h1>
+                <p>@Html.Raw(Model.Content)</p>
+            </div>
+        </div>
+    </div>
+</div>

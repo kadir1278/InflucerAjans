@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Influencer.Entities.Entity.Service>
+<section class="services-section">
+    <div class="section-title">
+        <h3>Our Services</h3>
+        <hr />
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <div class="services-item">
+                        <i class="@item.Icon"></i>
+                        <h4>@item.Title</h4>
+                        <p>@item.ShortContent</p>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="text-center">
+            <a href="/tr/servislerimiz" class="site-btn">See More <i class="fa fa-arrow-circle-o-right"></i></a>
+        </div>
+    </div>
+</section>

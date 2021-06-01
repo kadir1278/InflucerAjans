@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Influencer.Entities.Entity.Service>
 @{
     ViewBag.Title = "Services";
     Layout = "~/Views/Shared/En/_Layout.cshtml";
@@ -7,78 +7,15 @@
 <section class="blog-section">
     <div class="blog-warp">
         <div class="row">
-            <div class="col-lg-4 col-sm-6">
-                <div class="blog-post">
-                    <img src="~/Content/Site/img/blog/1.jpg" alt="">
-                    <h3>10 Tips for a great shot</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi-dunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
-                    <a href="" class="site-btn">View Detail <i class="fa fa-arrow-circle-right"></i></a>
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-sm-6">
+                    <div class="blog-post">
+                        <a href="/en/services/@item.Slug"><img src="~/Image/Services/@item.ImageVideoPath" alt="@item.Title"></a>
+                        <h3><a href="/en/services/@item.Slug">@item.Title</a></h3>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="blog-post">
-                    <img src="~/Content/Site/img/blog/2.jpg" alt="">
-                    <h3>Photography cousrses 101</h3>
-                    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravi-da. Risus commodo viverra maecenas ac-cumsan lacus vel facilisis.</p>
-                    <a href="" class="site-btn">View Detail <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="blog-post">
-                    <img src="~/Content/Site/img/blog/3.jpg" alt="">
-                    <h3>Photography cousrses 101</h3>
-                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facili-sis commodo viverra maecenas. </p>
-                    <a href="" class="site-btn">View Detail <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="blog-post">
-                    <img src="~/Content/Site/img/blog/4.jpg" alt="">
-                    <h3>Photography cousrses 101</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi-dunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
-                    <a href="" class="site-btn">View Detail <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="blog-post">
-                    <img src="~/Content/Site/img/blog/5.jpg" alt="">
-                    <h3>Photography cousrses 101</h3>
-                    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravi-da. Risus commodo viverra maecenas ac-cumsan lacus vel facilisis.</p>
-                    <a href="" class="site-btn">View Detail <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="blog-post">
-                    <img src="~/Content/Site/img/blog/6.jpg" alt="">
-                    <h3>New Lifestyle event</h3>
-                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facili-sis commodo viverra maecenas. </p>
-                    <a href="" class="site-btn">View Detail <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="blog-post">
-                    <img src="~/Content/Site/img/blog/7.jpg" alt="">
-                    <h3>10 Tips for a great shot</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi-dunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
-                    <a href="" class="site-btn">View Detail <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="blog-post">
-                    <img src="~/Content/Site/img/blog/8.jpg" alt="">
-                    <h3>Photography cousrses 101</h3>
-                    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravi-da. Risus commodo viverra maecenas ac-cumsan lacus vel facilisis.</p>
-                    <a href="" class="site-btn">View Detail <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="blog-post">
-                    <img src="~/Content/Site/img/blog/9.jpg" alt="">
-                    <h3>New Lifestyle event</h3>
-                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facili-sis commodo viverra maecenas. </p>
-                    <a href="" class="site-btn">View Detail <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>

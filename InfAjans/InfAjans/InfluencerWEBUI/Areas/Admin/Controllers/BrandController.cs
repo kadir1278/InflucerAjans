@@ -43,7 +43,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     return RedirectToAction("Brand", "Dashboard");
                 }
             }
-            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName");
+            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName",brand.LangTableID);
 
             return View(brand);
         }
@@ -60,7 +60,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName");
+            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName", brand.LangTableID);
 
             return View(brand);
         }
@@ -80,37 +80,16 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     var url = Path.Combine(Server.MapPath("~/Image/Brands/" + photoName));
                     LogoPath.SaveAs(url);
                     AU.LogoPath = photoName;
-                    AU.Name = brand.Name;
-                    AU.Content = brand.Content;
-                    AU.LangTableID = brand.LangTableID;
-                    #region seo
-                    AU.seoTitle = brand.seoTitle;
-                    AU.seoKeywords = brand.seoKeywords;
-                    AU.seoDescription = brand.seoDescription;
-                    AU.seoAuthor = brand.seoAuthor;
-                    AU.seoCopyright = brand.seoCopyright;
-                    AU.seoDesign = brand.seoDesign;
-                    AU.seoReply = brand.seoReply;
-                    AU.seoSubject = brand.seoSubject;
-                    AU.seoTwitterDescription = brand.seoTwitterDescription;
-                    AU.seoTwitterKeywords = brand.seoTwitterKeywords;
-                    AU.seoTwitterTitle = brand.seoTwitterTitle;
-                    AU.seoTwitterUrl = brand.seoTwitterUrl;
-                    AU.seoFacebookDescription = brand.seoFacebookDescription;
-                    AU.seoFacebookKeywrods = brand.seoFacebookKeywrods;
-                    AU.seoFacebookTitle = brand.seoFacebookTitle;
-                    AU.seoFacebookUrl = brand.seoFacebookUrl;
-                    #endregion
-                    AU.Slug = StringHelper.StringReplacer(brand.Name.ToLower());
-
-                    AU.ShortContent = brand.ShortContent;
-                    AU.IsActive = brand.IsActive;
-                    AU.LastDateTime = DateTime.Now;
-                    db.SaveChanges();
-                    return RedirectToAction("Brand", "Dashboard");
                 }
+                AU.Name = brand.Name;
+                AU.LangTableID = brand.LangTableID;
+                AU.Slug = StringHelper.StringReplacer(brand.Name.ToLower());
+                AU.IsActive = brand.IsActive;
+                AU.LastDateTime = DateTime.Now;
+                db.SaveChanges();
+                return RedirectToAction("Brand", "Dashboard");
             }
-            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName");
+            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName", brand.LangTableID);
 
             return View(brand);
         }

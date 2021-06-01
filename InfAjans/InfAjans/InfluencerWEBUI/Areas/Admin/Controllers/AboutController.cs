@@ -50,7 +50,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     }
                 }
             }
-            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName");
+            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName",about.LangTableID);
 
             return View(about);
         }
@@ -67,8 +67,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName");
-
+            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName", about.LangTableID);
             return View(about);
         }
         [HttpPost, ValidateInput(false)]
@@ -86,20 +85,19 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     string photoName = Path.GetFileName(Guid.NewGuid().ToString() + ImageVideoPath.FileName);
                     var url = Path.Combine(Server.MapPath("~/Image/Abouts/" + photoName));
                     ImageVideoPath.SaveAs(url);
-                    AU.Title = about.Title;
-                    AU.LangTableID = about.LangTableID;
                     AU.ImageVideoPath = photoName;
-                    AU.Content = about.Content;
-                    AU.Slug = StringHelper.StringReplacer(about.Title.ToLower());
-                    AU.ShortContent = about.ShortContent;
-                    AU.IsActive = about.IsActive;
-                    AU.LastDateTime = DateTime.Now;
-                    db.SaveChanges();
-                    return RedirectToAction("About", "Dashboard");
                 }
+                AU.Title = about.Title;
+                AU.LangTableID = about.LangTableID;
+                AU.Content = about.Content;
+                AU.Slug = StringHelper.StringReplacer(about.Title.ToLower());
+                AU.ShortContent = about.ShortContent;
+                AU.IsActive = about.IsActive;
+                AU.LastDateTime = DateTime.Now;
+                db.SaveChanges();
+                return RedirectToAction("About", "Dashboard");
             }
-            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName");
-
+            ViewBag.LangTableID = new SelectList(db.Langs.Where(x => x.IsActive == true), "ID", "LangName", about.LangTableID);
             return View(about);
         }
         #endregion

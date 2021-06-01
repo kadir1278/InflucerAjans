@@ -9,40 +9,9 @@
 }
 
 <!-- Services section  -->
-<section class="services-section">
-    <div class="section-title">
-        <h3>Servislerimiz</h3>
-        <hr />
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="services-item">
-                    <i class="fa fa-newspaper-o"></i>
-                    <h4>Studio Photography</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ul-trices gravida. </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="services-item">
-                    <i class="fa fa-newspaper-o"></i>
-                    <h4>Wedding Editing</h4>
-                    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="services-item">
-                    <i class="fa fa-newspaper-o"></i>
-                    <h4>Photo on tape</h4>
-                    <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra.</p>
-                </div>
-            </div>
-        </div>
-        <div class="text-center">
-            <a href="#" class="site-btn">Devamını Gör <i class="fa fa-arrow-circle-o-right"></i></a>
-        </div>
-    </div>
-</section>
+@{
+    Html.RenderAction("TRPartialServiceList", "Anasayfa");
+}
 <!-- Services section end  -->
 <!-- About section  -->
 @{
@@ -50,29 +19,29 @@
 }
 <!-- About section end  -->
 <!-- Portfolio section  -->
-<div class="icerik">
+<div class="icerik mb-5">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="services-item2">
-                                <i class="fa fa-cubes"></i>
+                            <div class="services-item">
+                                <img src="~/Content/Site/cubes.png" width="75" />
                                 <h4 class="baslik">Özgün ve Kaliteli İşler</h4>
                                 <p class="aciklama">Fark yaratmayan her iş, sıradan olmaya mahkumdur. Sıradanlıktan kurtularak, büyük - küçük demeden yaptığı her işte fark yaratmayı amaçlayan yaratıcı ekibimiz başarının anahtarının özgünlükten geçtiğini çok iyi biliyor. </p>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="services-item2">
-                                <i class="fa fa-users"></i>
+                            <div class="services-item">
+                                <img src="~/Content/Site/users-icon.png" width="75" />
                                 <h4 class="baslik">Uzman Kadro</h4>
                                 <p class="aciklama">Kişisel yetkinlik her alanda başarı getirir. Online dünyanın ortaya çıkışından itibaren sektörünün öncü kurumsal şirketlerinde dijital dünyayı yönetmek için görev yapan ekibimiz, bu bilgi birikimini artık Influencer Ajans'ın müşterileri için kullanıyor.</p>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="services-item2">
-                                <i class="fa fa-area-chart"></i>
+                            <div class="services-item">
+                                <img src="~/Content/Site/barchart.png" width="75" />
                                 <h4 class="baslik">Anatilik Düşünce Yapısı</h4>
                                 <p class="aciklama">Rakamlar bazen kelimelerden daha çok şey ifade eder. Dijital dünyanın rakamların çevresinde oluştuğunu biliyor ve her ay detaylı olarak yaptığımız analizlerle işimizi analitik olarak anlatıyoruz. Aylar arasında karşılaştırma yapmanızı sağlayacak bu raporlama dijital dünyanın neresinde olduğunuzu gösterecek.</p>
                             </div>
@@ -84,27 +53,7 @@
     </div>
 </div>
 
-<div class="portfolio-section">
-    <div class="section-title">
-        <h3>Çözüm Ortaklarımız</h3>
-        <hr />
-    </div>
-    <div class="row portfolio-gallery m-0">
-        <div class="mix col-xl-3 col-md-3 col-sm-4 col-6 p-0 nature">
-            <a href="~/Content/Site/img/portfolio/1.jpg" class="portfolio-item img-popup set-bg" data-setbg="/Content/Site/img/portfolio/1.jpg"></a>
-        </div>
-        <div class="mix col-xl-3 col-md-3 col-sm-4 col-6 p-0 studio">
-            <a href="/Content/Site/img/portfolio/2.jpg" class="portfolio-item img-popup set-bg" data-setbg="/Content/Site/img/portfolio/2.jpg"></a>
-        </div>
-        <div class="mix col-xl-3 col-md-3 col-sm-4 col-6 p-0 weddings">
-            <a href="/Content/Site/img/portfolio/3.jpg" class="portfolio-item img-popup set-bg" data-setbg="/Content/Site/img/portfolio/3.jpg"></a>
-        </div>
-        <div class="mix col-xl-3 col-md-3 col-sm-4 col-6 p-0 lifestyle">
-            <a href="/Content/Site/img/portfolio/4.jpg" class="portfolio-item img-popup set-bg" data-setbg="/Content/Site/img/portfolio/4.jpg"></a>
-        </div>
-    </div>
-    <div class="text-center mb-3">
-        <a href="#" class="site-btn">Devamını Gör <i class="fa fa-arrow-circle-o-right"></i></a>
-    </div>
-</div>
+@{
+    Html.RenderAction("TRPartialOurSolitionPartnerList", "Anasayfa");
+}
 <!-- Portfolio section end  -->

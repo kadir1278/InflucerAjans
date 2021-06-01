@@ -45,11 +45,6 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
             var x = db.Brands.ToList();
             return View(x);
         }
-        public ActionResult BrandImage()
-        {
-            var x = db.BrandImages.ToList();
-            return View(x);
-        }
         #endregion
         #region Influencer
         public ActionResult Influencer()
