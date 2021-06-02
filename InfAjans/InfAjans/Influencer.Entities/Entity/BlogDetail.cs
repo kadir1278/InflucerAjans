@@ -12,7 +12,6 @@ namespace Influencer.Entities.Entity
         public string Title { get; set; }
         public string Content { get; set; }
         public string File { get; set; }
-        public string ShortContent { get; set; }
         public int BlogID { get; set; }
         public Blog Blog { get; set; }
     }

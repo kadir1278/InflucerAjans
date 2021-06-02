@@ -11,9 +11,9 @@
         <table class="data-table table nowrap">
             <thead>
                 <tr>
+                    <th>Blog</th>
                     <th>Başlık</th>
                     <th>Resim</th>
-                    <th>Kısa Açıklama</th>
                     <th>Son Güncelleme Tarihi</th>
                     <th>Aktif Durumu</th>
                     <th class="datatable-nosort">İşlemler</th>
@@ -23,6 +23,7 @@
                 @foreach (var item in Model)
                 {
                     <tr>
+                        <td>@item.Blog.Title</td>
                         <td>@item.Title</td>
                         @if (item.File.EndsWith(".PNG") || item.File.EndsWith(".JPG") || item.File.EndsWith(".JPEG") || item.File.EndsWith(".GIF") || item.File.EndsWith(".TIFF") || item.File.EndsWith(".jpg") || item.File.EndsWith(".png") || item.File.EndsWith(".jpeg") || item.File.EndsWith(".tiff") || item.File.EndsWith(".gif"))
                         {
@@ -36,7 +37,6 @@
                                 </video>
                             </td>
                         }
-                        <td>@item.ShortContent</td>
                         <td>@item.LastDateTime.ToString("dd:MM:yyyy")</td>
                         @if (item.IsActive == true)
                         {

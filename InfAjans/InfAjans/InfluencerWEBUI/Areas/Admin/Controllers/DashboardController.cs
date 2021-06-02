@@ -111,7 +111,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
         }
         public ActionResult BlogDetails()
         {
-            var x = db.BlogDetails.ToList();
+            var x = db.BlogDetails.Include(y=>y.Blog).ToList();
             return View(x);
         }
         #endregion

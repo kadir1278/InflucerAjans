@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Influencer.Entities.Entity
 {
-    public class Blog:HighEntity
+    public class Blog:LittleEntity
     {
         public Blog()
         {

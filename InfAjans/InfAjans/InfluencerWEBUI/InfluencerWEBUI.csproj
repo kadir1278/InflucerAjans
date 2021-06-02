@@ -1877,6 +1877,7 @@
     <Content Include="Views\Bloglar\ENPartialBlogCategory.cshtml" />
     <Content Include="Views\Bloglar\EN.cshtml" />
     <Content Include="Views\Bloglar\ENPartialBlogList.cshtml" />
+    <Content Include="Views\BloglarDetay\TR.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1899,7 +1900,6 @@
     <Folder Include="Image\Services\" />
     <Folder Include="Image\Sliders\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\BloglarDetay\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Influencer.Entities\Influencer.Entities.csproj">

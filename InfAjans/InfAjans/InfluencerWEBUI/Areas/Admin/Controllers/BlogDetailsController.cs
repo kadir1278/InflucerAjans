@@ -17,6 +17,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
         #region Create
         public ActionResult AddBlogDetails()
         {
+            ViewBag.BlogID = new SelectList(db.Blogs.Where(x => x.IsActive == true), "ID", "Title");
             return View();
         }
         [HttpPost]
@@ -41,6 +42,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     return RedirectToAction("BlogDetails", "Dashboard");
                 }
             }
+            ViewBag.BlogID = new SelectList(db.Blogs.Where(x => x.IsActive == true), "ID", "Title",BlogDetail.BlogID);
             return View(BlogDetail);
         }
         #endregion
@@ -56,6 +58,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.BlogID = new SelectList(db.Blogs.Where(x => x.IsActive == true), "ID", "Title", BlogDetail.BlogID);
             return View(BlogDetail);
         }
         [HttpPost, ValidateInput(false)]
@@ -73,18 +76,18 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     string photoName = Path.GetFileName(Guid.NewGuid().ToString() + File.FileName);
                     var url = Path.Combine(Server.MapPath("~/Image/BlogDetails/" + photoName));
                     File.SaveAs(url);
-                    AU.Title = BlogDetail.Title;
                     AU.File = photoName;
-                    AU.Content = BlogDetail.Content;
-                    AU.ShortContent = BlogDetail.ShortContent;
-                    AU.IsActive = BlogDetail.IsActive;
-                    AU.Slug = StringHelper.StringReplacer(BlogDetail.Title.ToLower());
-
-                    AU.LastDateTime = DateTime.Now;
-                    db.SaveChanges();
-                    return RedirectToAction("BlogDetails", "Dashboard");
                 }
+                AU.Title = BlogDetail.Title;
+                AU.Content = BlogDetail.Content;
+                AU.IsActive = BlogDetail.IsActive;
+                AU.Slug = StringHelper.StringReplacer(BlogDetail.Title.ToLower());
+                AU.BlogID = BlogDetail.BlogID;
+                AU.LastDateTime = DateTime.Now;
+                db.SaveChanges();
+                return RedirectToAction("BlogDetails", "Dashboard");
             }
+            ViewBag.BlogID = new SelectList(db.Blogs.Where(x => x.IsActive == true), "ID", "Title", BlogDetail.BlogID);
             return View(BlogDetail);
         }
         #endregion

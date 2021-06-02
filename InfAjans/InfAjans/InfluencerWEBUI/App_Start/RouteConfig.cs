@@ -84,6 +84,16 @@ namespace InfluencerWEBUI
                 url: "en/blogs",
                 defaults: new { controller = "Bloglar", action = "EN"/*, id = UrlParameter.Optional*/ }
             );
+            routes.MapRoute(
+                name: "TRBloglarDetay",
+                url: "tr/bloglar/{SeoLink}",
+                defaults: new { controller = "Bloglar", action = "TR", SeoLink = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "ENBloglarDetay",
+                url: "en/blogs/{SeoLink}",
+                defaults: new { controller = "BloglarDetay", action = "EN", SeoLink = UrlParameter.Optional }
+            );
             #endregion
             #region PartialView
             routes.MapRoute(
