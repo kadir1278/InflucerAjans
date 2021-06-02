@@ -57,6 +57,8 @@
     <Compile Include="Entity\BlogCategory.cs" />
     <Compile Include="Entity\BlogDetail.cs" />
     <Compile Include="Entity\Brand.cs" />
+    <Compile Include="Entity\Contact.cs" />
+    <Compile Include="Entity\ContactMail.cs" />
     <Compile Include="Entity\Inflencer.cs" />
     <Compile Include="Entity\InfluencerVideo.cs" />
     <Compile Include="Entity\InNew.cs" />

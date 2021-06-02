@@ -1636,6 +1636,8 @@
     <Compile Include="Areas\Admin\Controllers\BlogController.cs" />
     <Compile Include="Areas\Admin\Controllers\BlogDetailsController.cs" />
     <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ContactController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ContactMailController.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Admin\Controllers\InfluencerController.cs" />
     <Compile Include="Areas\Admin\Controllers\InfluencerVideoController.cs" />
@@ -1849,6 +1851,12 @@
     <Content Include="Areas\Admin\Views\SocialMedia\AddSocialMedia.cshtml" />
     <Content Include="Areas\Admin\Views\SocialMedia\UpdateSocialMedia.cshtml" />
     <Content Include="Areas\Admin\Views\Dashboard\SocialMedia.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\ContactMail.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\Contact.cshtml" />
+    <Content Include="Areas\Admin\Views\ContactMail\AddContactMail.cshtml" />
+    <Content Include="Areas\Admin\Views\ContactMail\UpdateContactMail.cshtml" />
+    <Content Include="Areas\Admin\Views\Contact\AddContact.cshtml" />
+    <Content Include="Areas\Admin\Views\Contact\UpdateContact.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

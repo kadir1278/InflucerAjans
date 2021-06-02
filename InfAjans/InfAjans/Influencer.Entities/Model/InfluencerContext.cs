@@ -1,7 +1,7 @@
 ﻿using Influencer.Entities.Entity;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;   
+using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
@@ -31,7 +31,9 @@ namespace Influencer.Entities.Model
         public DbSet<BlogDetail> BlogDetails { get; set; }
         public DbSet<MainGoogleSeo> MainGoogleSeos { get; set; }
         public DbSet<MainSlider> MainSliders { get; set; }
-        public DbSet<SocialMedia> SocialMedias{ get; set; }
+        public DbSet<SocialMedia> SocialMedias { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<ContactMail> ContactMails { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

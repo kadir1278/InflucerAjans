@@ -129,6 +129,18 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
             return View(x);
         }
         #endregion
+        #region İletişim
+        public ActionResult Contact()
+        {
+            var x = db.Contacts.ToList();
+            return View(x);
+        }
+        public ActionResult ContactMail()
+        {
+            var x = db.ContactMails.ToList();
+            return View(x);
+        }
+        #endregion
 
     }
 }
