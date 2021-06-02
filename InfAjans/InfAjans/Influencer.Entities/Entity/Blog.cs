@@ -9,12 +9,16 @@ namespace Influencer.Entities.Entity
 {
     public class Blog:HighEntity
     {
+        public Blog()
+        {
+            this.BlogDetails = new HashSet<BlogDetail>();
+        }
         public string Title { get; set; }
         public string Content { get; set; }
         public string File { get; set; }
         public string ShortContent { get; set; }
         public int BlogCategoryID { get; set; }
         public BlogCategory BlogCategory { get; set; }
-
+        public virtual ICollection<BlogDetail> BlogDetails { get; set; }
     }
 }
