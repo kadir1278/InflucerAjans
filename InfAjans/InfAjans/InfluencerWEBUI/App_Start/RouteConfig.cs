@@ -75,9 +75,14 @@ namespace InfluencerWEBUI
                 defaults: new { controller = "CozumOrtaklarimiz", action = "TR"/*, id = UrlParameter.Optional*/ }
             );
             routes.MapRoute(
-                name: "ENCozumOrtaklarimiz",
-                url: "en/our-solution-partners",
-                defaults: new { controller = "CozumOrtaklarimiz", action = "EN"/*, id = UrlParameter.Optional*/ }
+                name: "TRBloglar",
+                url: "tr/bloglar",
+                defaults: new { controller = "Bloglar", action = "TR"/*, id = UrlParameter.Optional*/ }
+            );
+            routes.MapRoute(
+                name: "ENBloglar",
+                url: "en/blogs",
+                defaults: new { controller = "Bloglar", action = "EN"/*, id = UrlParameter.Optional*/ }
             );
             #endregion
             #region PartialView
@@ -120,6 +125,26 @@ namespace InfluencerWEBUI
                name: "ENPartialOurSolitionPartnerList",
                url: "ENPartialOurSolitionPartnerList",
                defaults: new { controller = "Anasayfa", action = "ENPartialOurSolitionPartnerList"/*, id = UrlParameter.Optional*/ }
+           );
+            routes.MapRoute(
+               name: "TRPartialBlogCategory",
+               url: "TRPartialBlogCategory",
+               defaults: new { controller = "Bloglar", action = "TRPartialBlogCategory"/*, id = UrlParameter.Optional*/ }
+           );
+            routes.MapRoute(
+               name: "TRPartialBlogList",
+               url: "TRPartialBlogList",
+               defaults: new { controller = "Bloglar", action = "TRPartialBlogList"/*, id = UrlParameter.Optional*/ }
+           );
+            routes.MapRoute(
+               name: "ENPartialBlogCategory",
+               url: "ENPartialBlogCategory",
+               defaults: new { controller = "Bloglar", action = "ENPartialBlogCategory"/*, id = UrlParameter.Optional*/ }
+           );
+            routes.MapRoute(
+               name: "ENPartialBlogList",
+               url: "ENPartialBlogList",
+               defaults: new { controller = "Bloglar", action = "ENPartialBlogList"/*, id = UrlParameter.Optional*/ }
            );
             #endregion
         }
