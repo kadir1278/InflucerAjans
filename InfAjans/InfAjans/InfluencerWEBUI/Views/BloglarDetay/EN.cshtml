@@ -1,7 +1,7 @@
 ﻿@model Influencer.Entities.Entity.Blog
 @{
-    ViewBag.Title = Model.Title;
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "EN";
+    Layout = "~/Views/Shared/En/_Layout.cshtml";
 }
 <div class="servis-detay mb-5">
     <div class="container">
@@ -27,9 +27,9 @@
                     }
                     else if (item.File.EndsWith(".avi") || item.File.EndsWith(".AVI") || item.File.EndsWith(".mp4") || item.File.EndsWith(".MP4") || item.File.EndsWith(".mov") || item.File.EndsWith(".MOV") || item.File.EndsWith(".flv") || item.File.EndsWith(".FLV") || item.File.EndsWith(".mpg") || item.File.EndsWith(".MPG"))
                     {
-                            <video controls>
-                                <source src="~/Image/BlogDetails/@item.File" type="video/mp4">
-                            </video>
+                        <video controls>
+                            <source src="~/Image/BlogDetails/@item.File" type="video/mp4">
+                        </video>
                     }
 
                     <hr />

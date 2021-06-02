@@ -1432,6 +1432,12 @@ ol {
 	width:800px;
 	height:600px;
 }
+.servis-detay video{
+	display:block;
+	margin:auto;
+	width:100%;
+	height:auto;
+}
 .servis-detay h1{
 	text-align:center;
 	padding:5px;

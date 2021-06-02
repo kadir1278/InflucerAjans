@@ -1878,6 +1878,7 @@
     <Content Include="Views\Bloglar\EN.cshtml" />
     <Content Include="Views\Bloglar\ENPartialBlogList.cshtml" />
     <Content Include="Views\BloglarDetay\TR.cshtml" />
+    <Content Include="Views\BloglarDetay\EN.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
