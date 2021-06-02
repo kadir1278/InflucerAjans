@@ -13,9 +13,6 @@
                 <tr>
                     <th>İsim</th>
                     <th>Soyisim</th>
-                    <th>Şehir</th>
-                    <th>İlçe</th>
-                    <th>Adres</th>
                     <th>Dosya</th>
                     <th>Konu</th>
                     <th>Mesaj</th>
@@ -30,8 +27,6 @@
                 <tr>
                     <td>@item.Name</td>
                     <td>@item.Surname</td>
-                    <td>@item.City</td>
-                    <td>@item.District</td>
                     <td>@item.Address</td>
                     @if (item.FilePath.EndsWith(".PNG") || item.FilePath.EndsWith(".JPG") || item.FilePath.EndsWith(".JPEG") || item.FilePath.EndsWith(".GIF") || item.FilePath.EndsWith(".TIFF") || item.FilePath.EndsWith(".jpg") || item.FilePath.EndsWith(".png") || item.FilePath.EndsWith(".jpeg") || item.FilePath.EndsWith(".tiff") || item.FilePath.EndsWith(".gif"))
                     {
@@ -46,7 +41,6 @@
                         </td>
                     }
                     <td>@item.Subject</td>
-                    <td>@item.Message</td>
                     <td>@item.LastDateTime.ToString("dd:MM:yyyy")</td>
                     @if (item.IsActive == true)
                     {

@@ -17,7 +17,5 @@ namespace Influencer.Entities.Entity
         public string FilePath { get; set; }
         public string Subject { get; set; }
         public string Message { get; set; }
-        public int LangTableID { get; set; }
-        public LangTable LangTable { get; set; }
     }
 }
