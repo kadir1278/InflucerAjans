@@ -1770,8 +1770,6 @@
     <Content Include="Areas\Admin\Views\About\UpdateAbout.cshtml" />
     <Content Include="Areas\Admin\Views\API\AddAPI.cshtml" />
     <Content Include="Areas\Admin\Views\API\UpdateAPI.cshtml" />
-    <Content Include="Areas\Admin\Views\ApplicationForm\AddApplicationForm.cshtml" />
-    <Content Include="Areas\Admin\Views\ApplicationForm\UpdateApplicationForm.cshtml" />
     <Content Include="Areas\Admin\Views\Authority\Login.cshtml" />
     <Content Include="Areas\Admin\Views\BlogDetails\AddBlogDetails.cshtml" />
     <Content Include="Areas\Admin\Views\BlogDetails\UpdateBlogDetails.cshtml" />
@@ -1853,8 +1851,6 @@
     <Content Include="Areas\Admin\Views\Dashboard\SocialMedia.cshtml" />
     <Content Include="Areas\Admin\Views\Dashboard\ContactMail.cshtml" />
     <Content Include="Areas\Admin\Views\Dashboard\Contact.cshtml" />
-    <Content Include="Areas\Admin\Views\ContactMail\AddContactMail.cshtml" />
-    <Content Include="Areas\Admin\Views\ContactMail\UpdateContactMail.cshtml" />
     <Content Include="Areas\Admin\Views\Contact\AddContact.cshtml" />
     <Content Include="Areas\Admin\Views\Contact\UpdateContact.cshtml" />
     <None Include="packages.config" />
