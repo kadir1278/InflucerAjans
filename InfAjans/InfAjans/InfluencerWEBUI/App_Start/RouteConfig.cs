@@ -94,6 +94,16 @@ namespace InfluencerWEBUI
                 url: "en/blogs/{SeoLink}",
                 defaults: new { controller = "BloglarDetay", action = "EN", SeoLink = UrlParameter.Optional }
             );
+            routes.MapRoute(
+                name: "TRIletisim",
+                url: "tr/iletisim",
+                defaults: new { controller = "Iletisim", action = "TR"/*, id = UrlParameter.Optional*/ }
+            );
+            routes.MapRoute(
+                name: "TRContact",
+                url: "en/contacts",
+                defaults: new { controller = "Iletisim", action = "EN"/*, id = UrlParameter.Optional*/ }
+            );
             #endregion
             #region PartialView
             routes.MapRoute(
@@ -155,6 +165,16 @@ namespace InfluencerWEBUI
                name: "ENPartialBlogList",
                url: "ENPartialBlogList",
                defaults: new { controller = "Bloglar", action = "ENPartialBlogList"/*, id = UrlParameter.Optional*/ }
+           );
+            routes.MapRoute(
+               name: "PartialContact",
+               url: "PartialContact",
+               defaults: new { controller = "Iletisim", action = "PartialContact"/*, id = UrlParameter.Optional*/ }
+           );
+            routes.MapRoute(
+               name: "ENPartialContact",
+               url: "ENPartialContact",
+               defaults: new { controller = "Iletisim", action = "ENPartialContact"/*, id = UrlParameter.Optional*/ }
            );
             #endregion
         }
