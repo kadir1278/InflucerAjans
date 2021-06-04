@@ -1891,6 +1891,7 @@
     <Content Include="Views\Iletisim\ENPartialContact.cshtml" />
     <Content Include="Views\Iletisim\EN.cshtml" />
     <Content Include="Views\BasvuruForm\TR.cshtml" />
+    <Content Include="Views\BasvuruForm\EN.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
