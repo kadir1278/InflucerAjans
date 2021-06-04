@@ -119,6 +119,16 @@ namespace InfluencerWEBUI
                 url: "en/application-form",
                 defaults: new { controller = "BasvuruForm", action = "EN"/*, id = UrlParameter.Optional*/ }
             );
+            routes.MapRoute(
+                name: "ENMenajerDetay",
+                url: "en/our-managers/{SeoLink}",
+                defaults: new { controller = "MenajerDetay", action = "EN", SeoLink = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "TRMenajerDetay",
+                url: "tr/menajerlerimiz/{SeoLink}",
+                defaults: new { controller = "MenajerDetay", action = "TR", SeoLink = UrlParameter.Optional }
+            );
             #endregion
             #region PartialView
             routes.MapRoute(

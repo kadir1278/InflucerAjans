@@ -43,7 +43,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     }
                     Influencer.IsActive = true;
                     Influencer.LastDateTime = DateTime.Now;
-                    Influencer.Slug = StringHelper.StringReplacer(Influencer.Name.ToLower());
+                    Influencer.Slug = StringHelper.StringReplacer(Influencer.Name.ToLower()+" "+Influencer.Surname.ToLower());
 
                     db.Inflencers.Add(Influencer);
                     db.SaveChanges();
@@ -118,7 +118,7 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                 #endregion
                 AU.IsActive = Influencer.IsActive;
                 AU.LastDateTime = DateTime.Now;
-                AU.Slug = StringHelper.StringReplacer(Influencer.Name.ToLower());
+                AU.Slug = StringHelper.StringReplacer(Influencer.Name.ToLower() + " " + Influencer.Surname.ToLower());
 
                 db.SaveChanges();
                 return RedirectToAction("Influencer", "Dashboard");
