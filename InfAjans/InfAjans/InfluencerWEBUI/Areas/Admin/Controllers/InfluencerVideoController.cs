@@ -81,16 +81,16 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     var url = Path.Combine(Server.MapPath("~/Image/InfluencerVideos/" + photoName));
                     InfluencerVideoPath.SaveAs(url);
                     AU.InfluencerVideoPath = photoName;
-                    AU.Content = brand.Content;
-                    AU.Title = brand.Title;
-                    AU.InfluencerID = brand.InfluencerID;
-                    AU.IsActive = brand.IsActive;
-                    AU.LastDateTime = DateTime.Now;
-                    AU.Slug = StringHelper.StringReplacer(brand.Title.ToLower());
-
-                    db.SaveChanges();
-                    return RedirectToAction("InfluencerVideo", "Dashboard");
                 }
+                AU.Content = brand.Content;
+                AU.Title = brand.Title;
+                AU.InfluencerID = brand.InfluencerID;
+                AU.IsActive = brand.IsActive;
+                AU.LastDateTime = DateTime.Now;
+                AU.Slug = StringHelper.StringReplacer(brand.Title.ToLower());
+
+                db.SaveChanges();
+                return RedirectToAction("InfluencerVideo", "Dashboard");
             }
             ViewBag.InfluencerID = new SelectList(db.Inflencers.Where(x => x.IsActive == true), "ID", "Name");
 
