@@ -60,13 +60,22 @@
                         <div class="col-md-12">
                             <select class="custom-select2 form-control" name="PageUrl" required style="width: 100%; height: 38px;">
                                 <optgroup label="Lütfen Sayfanızı Seçiniz...">
-                                    <option value="/">Anasayfa</option>
-                                    <option value="/hakkimizda">Hakkımızda</option>
-                                    <option value="/iletisim">İletişim</option>
-                                    <option value="/musteri-hizmetleri">Müşteri Hizmetleri</option>
-                                    <option value="/teknik-destek">Teknik Destek</option>
-                                    <option value="/bize-bildirin">Bize Bildirin</option>
-                                    <option value="/ekibimiz">Ekibimiz</option>
+                                    <option value="/tr">Anasayfa</option>
+                                    <option value="/tr/hakkimizda">Hakkımızda</option>
+                                    <option value="/tr/servislerimiz">Servislerimiz</option>
+                                    <option value="/tr/menajerlerimiz">Menajerlerimiz</option>
+                                    <option value="/tr/cozum-ortaklarimiz">Çözüm Ortaklarımız</option>
+                                    <option value="/tr/bloglar">Bloglar</option>
+                                    <option value="/tr/iletisim">İletişim</option>
+                                    <option value="/basvuru-formu">Başvuru Formu</option>
+                                    <option value="/en">Home</option>
+                                    <option value="/en/about">About</option>
+                                    <option value="/en/services">Services</option>
+                                    <option value="/en/our-managers">Our Managers</option>
+                                    <option value="/en/our-solution-partners">Our Solution Partners</option>
+                                    <option value="/en/blogs">Blogs</option>
+                                    <option value="/en/contacts">Contact</option>
+                                    <option value="/en/application-form">Application Form</option>
                                 </optgroup>
                             </select>
                             @Html.ValidationMessageFor(model => model.PageUrl, "", new { @class = "text-danger" })

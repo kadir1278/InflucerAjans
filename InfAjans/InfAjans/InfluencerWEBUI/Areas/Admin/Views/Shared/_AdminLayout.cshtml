@@ -1,8 +1,8 @@
-﻿@*@if (Session["AdminGiris"] == null)
+﻿@if (Session["AdminGiris"] == null)
 {
     Response.Redirect("/Admin/Authority/Login");
 
-}*@
+}
 @{
     var kullanicilar = Session["AdminGiris"] as Influencer.Entities.Entity.UserMember;
 }
@@ -82,7 +82,6 @@
                         }
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-                        <a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Yardım</a>
                         <a class="dropdown-item" href="@Url.Action("Logout","Authority")"><i class="dw dw-logout"></i> Çıkış Yap</a>
                     </div>
                 </div>
@@ -112,24 +111,6 @@
                         <ul class="submenu">
                             <li><a href="/Admin/Dashboard/Index">Admin Sayfasına Git</a></li>
                             <li><a href="/" target="_blank">Kullanıcı Sayfasına Git</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon dw dw-analytics-1"></span><span class="mtext">API Ayarları</span>
-                        </a>
-                        <ul class="submenu">
-                            <li> <a href="/Admin/Dashboard/API">API Listele</a></li>
-                            <li> <a href="/Admin/API/AddAPI">API Ekle</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon dw dw-pie-chart"></span><span class="mtext">Basında Biz</span>
-                        </a>
-                        <ul class="submenu">
-                            <li> <a href="/Admin/Dashboard/InNew">Basın Listele</a></li>
-                            <li> <a href="/Admin/InNew/AddInNew">Basın Ekle</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">

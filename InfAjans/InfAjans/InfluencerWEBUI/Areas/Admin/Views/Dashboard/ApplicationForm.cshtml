@@ -27,7 +27,6 @@
                 <tr>
                     <td>@item.Name</td>
                     <td>@item.Surname</td>
-                    <td>@item.Address</td>
                     @if (item.FilePath.EndsWith(".PNG") || item.FilePath.EndsWith(".JPG") || item.FilePath.EndsWith(".JPEG") || item.FilePath.EndsWith(".GIF") || item.FilePath.EndsWith(".TIFF") || item.FilePath.EndsWith(".jpg") || item.FilePath.EndsWith(".png") || item.FilePath.EndsWith(".jpeg") || item.FilePath.EndsWith(".tiff") || item.FilePath.EndsWith(".gif"))
                     {
                         <td><img src="~/File/ApplicationForms/@item.FilePath" width="150" /></td>
