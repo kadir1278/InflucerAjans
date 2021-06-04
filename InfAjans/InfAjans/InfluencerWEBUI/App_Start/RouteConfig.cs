@@ -75,6 +75,11 @@ namespace InfluencerWEBUI
                 defaults: new { controller = "CozumOrtaklarimiz", action = "TR"/*, id = UrlParameter.Optional*/ }
             );
             routes.MapRoute(
+                name: "ENCozumOrtaklarimiz",
+                url: "en/our-solution-partners",
+                defaults: new { controller = "CozumOrtaklarimiz", action = "EN"/*, id = UrlParameter.Optional*/ }
+            );
+            routes.MapRoute(
                 name: "TRBloglar",
                 url: "tr/bloglar",
                 defaults: new { controller = "Bloglar", action = "TR"/*, id = UrlParameter.Optional*/ }
@@ -103,6 +108,16 @@ namespace InfluencerWEBUI
                 name: "TRContact",
                 url: "en/contacts",
                 defaults: new { controller = "Iletisim", action = "EN"/*, id = UrlParameter.Optional*/ }
+            );
+            routes.MapRoute(
+                name: "TRBasvuruForm",
+                url: "tr/basvuru-formu",
+                defaults: new { controller = "BasvuruForm", action = "TR"/*, id = UrlParameter.Optional*/ }
+            );
+            routes.MapRoute(
+                name: "ENApplicationForm",
+                url: "en/application-form",
+                defaults: new { controller = "BasvuruForm", action = "EN"/*, id = UrlParameter.Optional*/ }
             );
             #endregion
             #region PartialView

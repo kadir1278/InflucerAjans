@@ -40,6 +40,12 @@
                             </video>
                         </td>
                     }
+                    else if (item.FilePath.EndsWith(".pdf") || item.FilePath.EndsWith(".PDF") || item.FilePath.EndsWith(".docx") || item.FilePath.EndsWith(".DOCX") || item.FilePath.EndsWith(".xls") || item.FilePath.EndsWith(".XLS") || item.FilePath.EndsWith(".pptx") || item.FilePath.EndsWith(".PPTX"))
+                    {
+                        <td>
+                            <a href="/File/ApplicationForms/@item.FilePath" target="_blank"><img src="~/Content/Site/PDF.png" width="50" /></a>
+                        </td>
+                    }
                     <td>@item.Subject</td>
                     <td>@item.LastDateTime.ToString("dd:MM:yyyy")</td>
                     @if (item.IsActive == true)

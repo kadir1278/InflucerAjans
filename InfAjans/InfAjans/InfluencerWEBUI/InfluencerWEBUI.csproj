@@ -702,6 +702,7 @@
     <Content Include="Content\Site\js\owl.carousel.min.js" />
     <Content Include="Content\Site\logoo.png" />
     <Content Include="Content\Site\neon-2.jpg" />
+    <Content Include="Content\Site\PDF.png" />
     <Content Include="Content\Site\Source\photo credits - photographer.txt" />
     <Content Include="Content\Site\TR.PNG" />
     <Content Include="Content\Site\users-icon.png" />
@@ -1889,6 +1890,7 @@
     <Content Include="Views\Iletisim\PartialContact.cshtml" />
     <Content Include="Views\Iletisim\ENPartialContact.cshtml" />
     <Content Include="Views\Iletisim\EN.cshtml" />
+    <Content Include="Views\BasvuruForm\TR.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1911,7 +1913,6 @@
     <Folder Include="Image\Services\" />
     <Folder Include="Image\Sliders\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\BasvuruForm\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Influencer.Entities\Influencer.Entities.csproj">

@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "TR";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                @{
+                    Html.RenderAction("PartialContact", "Iletisim");
+                }
+            </div>
+            <div class="col-lg-8">
+                <form class="contact-form" action="/tr/basvuru-formu" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="text" name="Name" required placeholder="Adınız">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" name="Surname" required placeholder="Soyadınız">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" name="City" required placeholder="Yaşadığınız İl">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" name="District" required placeholder="Yaşadığınız İlçe">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="file" name="FilePath" required >
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" name="Subject" required placeholder="Konunuzu Yazınız">
+                        </div>
+                        <div class="col-lg-4">
+                        </div>
+                        <div class="col-lg-12 mb-5">
+                            <textarea class="text-msg" name="Content" placeholder="Mesajınızı Giriniz."></textarea>
+                            <button class="site-btn" type="submit">Mesaj Gönder</button>
+                        </div>
+                        @if (ViewBag.Mesaj != null)
+                        {
+                            <div class="col-lg-12">
+                                <p class="alert alert-info">@ViewBag.Mesaj</p>
+                            </div>
+                        }
+                        @if (ViewBag.Hata != null)
+                        {
+                            <div class="col-lg-12">
+                                <p class="alert alert-danger">@ViewBag.Hata</p>
+                            </div>
+                        }
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact section end  -->
