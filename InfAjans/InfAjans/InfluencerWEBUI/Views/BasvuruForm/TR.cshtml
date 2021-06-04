@@ -31,15 +31,27 @@
                             <input type="text" name="District" required>
                         </div>
                         <div class="col-lg-6">
-                            <input type="file" name="FilePath" required >
+                            <label class="mb-2">Özgeçmiş (.pdf)</label>
+                            <input type="file" name="FilePath" required>
                         </div>
                         <div class="col-lg-6">
-                            <input type="text" name="Subject" required placeholder="Konunuzu Yazınız">
+                            <label class="mb-2">Konu</label>
+                            <select class="form-control" name="Subject" required>
+                                <optgroup label="Lütfen Konu Seçiniz">
+                                    <option value="Genel İş Başvurusu">Genel İş Başvurusu</option>
+                                    <option value="Sosyal Medya Uzmanı">Sosyal Medya Uzmanı</option>
+                                    <option value="Grafik Tasarım Uzmanı">Grafik Tasarım Uzmanı</option>
+                                    <option value="Dijital Pazarlama Uzmanı">Dijital Pazarlama Uzmanı</option>
+                                    <option value="Menajerlik Başvurusu">Menajerlik Başvurusu</option>
+                                    <option value="Influencer Başvurusu">Influencer Başvurusu</option>
+                                </optgroup>
+                            </select>
                         </div>
                         <div class="col-lg-4">
                         </div>
                         <div class="col-lg-12 mb-5">
-                            <textarea class="text-msg" name="Content" placeholder="Mesajınızı Giriniz."></textarea>
+                            <label class="mb-2">Mesaj</label>
+                            <textarea class="text-msg" name="Content"></textarea>
                             <button class="site-btn" type="submit">Mesaj Gönder</button>
                         </div>
                         @if (ViewBag.Mesaj != null)

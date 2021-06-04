@@ -1660,6 +1660,7 @@
     <Compile Include="Controllers\HakkimizdaController.cs" />
     <Compile Include="Controllers\IletisimController.cs" />
     <Compile Include="Controllers\InfluencersController.cs" />
+    <Compile Include="Controllers\MenajerDetayController.cs" />
     <Compile Include="Controllers\ServisDetayController.cs" />
     <Compile Include="Controllers\ServislerController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1914,6 +1915,7 @@
     <Folder Include="Image\Services\" />
     <Folder Include="Image\Sliders\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\MenajerDetay\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Influencer.Entities\Influencer.Entities.csproj">

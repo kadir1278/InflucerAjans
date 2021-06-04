@@ -36,13 +36,22 @@
                         </div>
                         <div class="col-lg-6">
                             <label class="mb-2">Subject</label>
-                            <input type="text" name="Subject" required>
+                            <select class="form-control" name="Subject" required>
+                                <optgroup label="Please Select Subject">
+                                    <option value="Genel İş Başvurusu">General Job Application</option>
+                                    <option value="Sosyal Medya Uzmanı">Social Media Specialist</option>
+                                    <option value="Grafik Tasarım Uzmanı">Graphic Design Specialist</option>
+                                    <option value="Dijital Pazarlama Uzmanı">Digital Marketing Specialist</option>
+                                    <option value="Menajerlik Başvurusu">Manager Job Application</option>
+                                    <option value="Influencer Başvurusu">Influencer Job Application</option>
+                                </optgroup>
+                            </select>
                         </div>
                         <div class="col-lg-4">
                         </div>
                         <div class="col-lg-12 mb-5">
                             <label class="mb-2">Message</label>
-                            <textarea class="text-msg" name="Content" placeholder="Mesajınızı Giriniz."></textarea>
+                            <textarea class="text-msg" name="Content"></textarea>
                             <button class="site-btn" type="submit">Mesaj Gönder</button>
                         </div>
                         @if (ViewBag.Mesaj != null)
