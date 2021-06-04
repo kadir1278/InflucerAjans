@@ -4,7 +4,6 @@
     ViewBag.Title = "AddSocialMedia";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
-
 <div class="pd-ltr-20 xs-pd-20-10">
     <div class="min-height-200px">
         <div class="page-header">
@@ -57,7 +56,7 @@
                     <div class="form-group">
                         <label class="control-label col-md-2">URL</label>
                         <div class="col-md-12">
-                            <input type="text" name="URL" class="form-control" required placeholder="Lütfen URL Giriniz" maxlength="110" />
+                            <input type="text" name="URL" class="form-control" required placeholder="Lütfen URL Giriniz https://twitter.com/ajansinfluencer ve veya 05326002796" maxlength="110" />
                             @Html.ValidationMessageFor(model => model.URL, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -67,11 +66,12 @@
                         <div class="col-md-12">
                             <select class="custom-select2 form-control" name="Icon" style="width: 100%; height: 38px;">
                                 <optgroup label="Lütfen Sayfa Seçiniz">
-                                    <option value="icon-facebook">Facebook</option>
-                                    <option value="icon-instagram">Instagram</option>
-                                    <option value="icon-youtube">Youtube</option>
-                                    <option value="icon-twitter">Twitter</option>
-                                    <option value="icon-linkedin">LinkedIn</option>
+                                    <option value="fa fa-facebook">Facebook</option>
+                                    <option value="fa fa-instagram">Instagram</option>
+                                    <option value="fa fa-youtube">Youtube</option>
+                                    <option value="fa fa-twitter">Twitter</option>
+                                    <option value="fa fa-whatsapp">Whatsapp</option>
+                                    <option value="fa fa-linkedin">LinkedIn</option>
                                 </optgroup>
                             </select>
                             @Html.ValidationMessageFor(model => model.Icon, "", new { @class = "text-danger" })

@@ -191,6 +191,11 @@ namespace InfluencerWEBUI
                url: "ENPartialContact",
                defaults: new { controller = "Iletisim", action = "ENPartialContact"/*, id = UrlParameter.Optional*/ }
            );
+            routes.MapRoute(
+               name: "PartialSocialMedia",
+               url: "PartialSocialMedia",
+               defaults: new { controller = "Anasayfa", action = "PartialSocialMedia"/*, id = UrlParameter.Optional*/ }
+           );
             #endregion
         }
     }

@@ -38,6 +38,10 @@ namespace InfluencerWEBUI.Controllers
         }
 
         #endregion
+        public ActionResult PartialSocialMedia()
+        {
+            return PartialView(db.SocialMedias.Where(x => x.IsActive == true).ToList().OrderByDescending(x=>x.ID));
+        }
         #region EN
         public ActionResult EN()
         {

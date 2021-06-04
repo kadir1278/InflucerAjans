@@ -1893,6 +1893,7 @@
     <Content Include="Views\Iletisim\EN.cshtml" />
     <Content Include="Views\BasvuruForm\TR.cshtml" />
     <Content Include="Views\BasvuruForm\EN.cshtml" />
+    <Content Include="Views\Anasayfa\PartialSocialMedia.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
