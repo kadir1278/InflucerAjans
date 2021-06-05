@@ -1,0 +1,15 @@
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Release\Influencer.Entities.dll.config
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Release\Influencer.Entities.dll
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Release\Influencer.Entities.pdb
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Release\EntityFramework.dll
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Release\EntityFramework.xml
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Release\Influencer.Entities.csproj.AssemblyReference.cache
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Release\Influencer.Entities.Migrations.init.resources
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Release\Influencer.Entities.Migrations.init1.resources
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Release\Influencer.Entities.csproj.GenerateResource.cache
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Release\Influencer.Entities.csproj.CoreCompileInputs.cache
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Release\Influencer.Entities.csproj.CopyComplete
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Release\Influencer.Entities.dll
+C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\InfAjans\InfAjans\Influencer.Entities\obj\Release\Influencer.Entities.pdb

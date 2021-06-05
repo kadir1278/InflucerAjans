@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Influencer";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model IEnumerable<Influencer.Entities.Entity.Inflencer>
+<form method="post">
+    <div class="card-box mb-30">
+        <h2 class="h4 pd-20">Influencer Listele</h2>
+        <table class="data-table table nowrap">
+            <thead>
+                <tr>
+                    <th>Influencer Kod</th>
+                    <th>İsim</th>
+                    <th>Soyisim</th>
+                    <th>Resim</th>
+                    <th>İnstagram Adres</th>
+                    <th>Facebook Adres</th>
+                    <th>Twitter Adres</th>
+                    <th>İnstagram Takipçi Sayısı</th>
+                    <th>Facebook Takipçi Sayısı</th>
+                    <th>Twitter Takipçi Sayısı</th>
+                    <th>Son Güncelleme Tarihi</th>
+                    <th>Aktif Durumu</th>
+                    <th class="datatable-nosort">İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@item.InfluencerCode</td>
+                    <td>@item.Name</td>
+                    <td>@item.Surname</td>
+                    @if (item.File.EndsWith(".PNG") || item.File.EndsWith(".JPG") || item.File.EndsWith(".JPEG") || item.File.EndsWith(".GIF") || item.File.EndsWith(".TIFF") || item.File.EndsWith(".jpg") || item.File.EndsWith(".png") || item.File.EndsWith(".jpeg") || item.File.EndsWith(".tiff") || item.File.EndsWith(".gif"))
+                    {
+                        <td><img src="~/Image/Influencers/@item.File" width="150" /></td>
+                    }
+                    else if (item.File.EndsWith(".avi") || item.File.EndsWith(".AVI") || item.File.EndsWith(".mp4") || item.File.EndsWith(".MP4") || item.File.EndsWith(".mov") || item.File.EndsWith(".MOV") || item.File.EndsWith(".flv") || item.File.EndsWith(".FLV") || item.File.EndsWith(".mpg") || item.File.EndsWith(".MPG"))
+                    {
+                        <td>
+                            <video width="150" height="150" controls>
+                                <source src="~/Image/Influencers/@item.File" type="video/mp4">
+                            </video>
+                        </td>
+                    }
+                    <td>@item.InstagramAddress</td>
+                    <td>@item.FacebookAddress</td>
+                    <td>@item.TwitterAddress</td>
+                    <td>@item.InstagramFollower</td>
+                    <td>@item.FacebookFollower</td>
+                    <td>@item.TwitterFollower</td>
+                    <td>@item.LastDateTime.ToString("dd:MM:yyyy")</td>
+                    @if (item.IsActive == true)
+                    {
+                        <td><span class="badge badge-success"><i class="fa fa-check"></i> Aktif</span></td>
+                    }
+                    else
+                    {
+                        <td><span class="badge badge-danger"><i class="fa fa-remove"></i> Pasif</span></td>
+                    }
+                    <td>
+                        <div class="dropdown">
+                            <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                                <i class="dw dw-more"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                                <a class="dropdown-item" href="/Admin/Influencer/UpdateInfluencer/@item.ID"><i class="dw dw-edit2"></i> Güncelle</a>
+                                <a class="dropdown-item" onclick="return confirm('Silmek istediğinize eminmisiniz ?')" href="/Admin/Influencer/DeleteInfluencer/@item.ID"><i class="dw dw-delete-3"></i> Sil</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</form>
+
+

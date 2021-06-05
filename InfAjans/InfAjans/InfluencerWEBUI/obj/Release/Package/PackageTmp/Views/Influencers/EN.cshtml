@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Influencer.Entities.Entity.Inflencer>
+@{
+    ViewBag.Title = "EN";
+    Layout = "~/Views/Shared/En/_Layout.cshtml";
+}
+<section class="blog-section">
+    <div class="blog-warp">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-sm-6">
+                    <div class="blog-post">
+                        <img src="~/Image/Influencers/@item.File" alt="@item.Name @item.Surname">
+                        <h3>10 Tips for a great shot</h3>
+                        <div class="blog-cata">
+                            <span><i class="fa fa-instagram"></i> <i class="fa fa-user-plus"></i> @item.InstagramFollower</span>
+                            <span><i class="fa fa-twitter"></i> <i class="fa fa-user-plus"></i> @item.TwitterFollower</span>
+                            <span><i class="fa fa-facebook"></i> <i class="fa fa-user-plus"></i> @item.FacebookFollower</span>
+                        </div>
+                        <a href="/en/our-managers/@item.Slug" class="site-btn">Seo More <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,56 @@
+﻿@model Influencer.Entities.Entity.About
+@{
+    ViewBag.Title = "Hakkımızda";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="about-section">
+    <div class="section-title">
+        <br />
+        <h3>Hakkımızda</h3>
+        <hr />
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 p-0">
+                <div class="about-bg set-bg">
+                    <img src="~/Image/Abouts/@Model.ImageVideoPath" width="100%" />
+                </div>
+            </div>
+            <div class="col-lg-6 p-0">
+                <div class="about-text">
+                    <h2>@Model.Title</h2>
+                    @Html.Raw(Model.Content)
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="services-item">
+                    <i class="fa fa-cubes"></i>
+                    <h4 title="Kaliteli ve Özgün İşler">Kaliteli ve Özgün İşler</h4>
+                    <p title="Sektörünüze dair yenilikçi olmayan her iş, sıradan görünmeye mahkumdur. Sıradanlıktan sıyrılarak, küçük-büyük demeden yaptığı her işte fark ve yenilik  yaratmayı kendine amaç edinmiş yaratıcı kadromuz başarının anahtarının özgünlük olduğunu bilerek size hizmet veriyor.">Sektörünüze dair yenilikçi olmayan her iş, sıradan görünmeye mahkumdur. Sıradanlıktan sıyrılarak, küçük-büyük demeden yaptığı her işte fark ve yenilik  yaratmayı kendine amaç edinmiş yaratıcı kadromuz başarının anahtarının özgünlük olduğunu bilerek size hizmet veriyor.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="services-item">
+                    <i class="fa fa-users"></i>
+                    <h4>Uzman Kadro</h4>
+                    <p title="Yetkin ve uzman kadro sektörde başarı getirir. Dijital dünyanın ortaya çıkışından itibaren iş bilincinde olan ve dijital dünyayı yöneten etkin kadromuz, bu bilgi birikimini Influencer Ajans'ın müşterileri için kullanıyor.">Yetkin ve uzman kadro sektörde başarı getirir. Dijital dünyanın ortaya çıkışından itibaren iş bilincinde olan ve dijital dünyayı yöneten etkin kadromuz, bu bilgi birikimini Influencer Ajans'ın müşterileri için kullanıyor.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="services-item">
+                    <i class="fa fa-area-chart"></i>
+                    <h4 title="Analitik Düşünce Yapısı">Anatilik Düşünce Yapısı</h4>
+                    <p title="Rakamlar çoğu zaman kelimelerden daha çok şey ifade ettiğini biliyor musunuz? Dijital dünyanın rakamların çevresinde oluştuğunu biliyor ve analitik bilgiler dahilinde sizlere sunum yapıyoruz.  Ay bazında karşılaştırma yapmanızı mümkün hale getirecek bu raporlama size dijital dünyadaki konumunuzu gösterecek.">Rakamlar çoğu zaman kelimelerden daha çok şey ifade ettiğini biliyor musunuz? Dijital dünyanın rakamların çevresinde oluştuğunu biliyor ve analitik bilgiler dahilinde sizlere sunum yapıyoruz.  Ay bazında karşılaştırma yapmanızı mümkün hale getirecek bu raporlama size dijital dünyadaki konumunuzu gösterecek.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

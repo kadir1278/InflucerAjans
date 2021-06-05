@@ -1,0 +1,265 @@
+﻿@if (Session["AdminGiris"] == null)
+{
+    Response.Redirect("/Admin/Authority/Login");
+
+}
+@{
+    var kullanicilar = Session["AdminGiris"] as Influencer.Entities.Entity.UserMember;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Basic Page Info -->
+    <meta charset="utf-8">
+    <title>Influencer Ajans | Meka Software</title>
+
+    <!-- Site favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Areas/Admin/Context/mekasoftware/NewLogo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Areas/Admin/Context/mekasoftware/32x32-M.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Areas/Admin~/Areas/Admin/Context/mekasoftware/32x32-M.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Areas/Admin/Context/mekasoftware/16x16-M.PNG">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="~/Areas/Admin/Context/Admin/vendors/styles/core.css">
+    <link rel="stylesheet" type="text/css" href="~/Areas/Admin/Context/Admin/vendors/styles/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Areas/Admin/Context/Admin/src/plugins/datatables/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Areas/Admin/Context/Admin/src/plugins/datatables/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Areas/Admin/Context/Admin/vendors/styles/style.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-119386393-1');
+    </script>
+</head>
+<body>
+    <div class="pre-loader">
+        <div class="pre-loader-box">
+            <div class="loader-logo"><img src="~/Areas/Admin/Context/mekasoftware/MiniLogo.png" alt=""></div>
+            <div class='loader-progress' id="progress_div">
+                <div class='bar' id='bar1'></div>
+            </div>
+            <div class='percent' id='percent1'>0%</div>
+            <div class="loading-text">
+                Yükleniyor...
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="header-left">
+            <div class="menu-icon dw dw-menu"></div>
+
+        </div>
+        <div class="header-right">
+
+            <div class="user-info-dropdown">
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                        <span class="user-icon">
+                            <img src="~/Areas/Admin/Context/mekasoftware/180x180-M.png" alt="">
+                        </span>
+                        @if (kullanicilar != null)
+                        {
+
+                            <span class="user-name">@kullanicilar.Name @kullanicilar.Surname</span>
+                        }
+                        else
+                        {
+
+                            <span class="user-name">Meka Softech</span>
+                        }
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                        <a class="dropdown-item" href="@Url.Action("Logout","Authority")"><i class="dw dw-logout"></i> Çıkış Yap</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="left-side-bar">
+        <div class="brand-logo">
+            <a href="/Admin/Dashboard/Index">
+                <img src="~/Areas/Admin/Context/Admin/vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
+                <img src="~/Areas/Admin/Context/mekasoftware/NewLogo.png" alt="" class="light-logo">
+            </a>
+            <div class="close-sidebar" data-toggle="left-sidebar-close">
+                <i class="ion-close-round"></i>
+            </div>
+        </div>
+        <div class="menu-block customscroll">
+            <div class="sidebar-menu">
+                <ul id="accordion-menu">
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-house-1"></span><span class="mtext">Anasayfa</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="/Admin/Dashboard/Index">Admin Sayfasına Git</a></li>
+                            <li><a href="/" target="_blank">Kullanıcı Sayfasına Git</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-analytics-2"></span><span class="mtext">Başvuru Form Ayarları</span>
+                        </a>
+                        <ul class="submenu">
+                            <li> <a href="/Admin/Dashboard/ApplicationForm">Başvuru Form Listele</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-analytics-5"></span><span class="mtext">Blog Ayarları</span>
+                        </a>
+                        <ul class="submenu">
+                            <li> <a href="/Admin/Dashboard/BlogCategory">Blog Kategori Listele</a></li>
+                            <li> <a href="/Admin/BlogCategory/AddBlogCategory">Blog Kategori Ekle</a></li>
+                            <li> <a href="/Admin/Dashboard/Blog">Blog Listele</a></li>
+                            <li> <a href="/Admin/Blog/AddBlog">Blog Ekle</a></li>
+                            <li> <a href="/Admin/Dashboard/BlogDetails">Blog Detay Listele</a></li>
+                            <li> <a href="/Admin/BlogDetails/AddBlogDetails">Blog Detay Ekle</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-analytics-2"></span><span class="mtext">Hakkında Ayarları</span>
+                        </a>
+                        <ul class="submenu">
+                            <li> <a href="/Admin/Dashboard/About">Hakkında Listele</a></li>
+                            <li> <a href="/Admin/About/AddAbout">Hakkında Ekle</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-analytics-5"></span><span class="mtext">Influncer Ayarları</span>
+                        </a>
+                        <ul class="submenu">
+                            <li> <a href="/Admin/Dashboard/Influencer">Influencer Listele</a></li>
+                            <li> <a href="/Admin/Influencer/AddInfluencer">Influencer Ekle</a></li>
+                            <li> <a href="/Admin/Dashboard/InfluencerVideo">Influencer Video Listele</a></li>
+                            <li> <a href="/Admin/InfluencerVideo/AddInfluencerVideo">Influencer Video Ekle</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-pie-chart"></span><span class="mtext">İletişim Ayarları</span>
+                        </a>
+                        <ul class="submenu">
+                            <li> <a href="/Admin/Dashboard/Contact">İletişim Listele</a></li>
+                            <li> <a href="/Admin/Contact/AddContact">İletişim Ekle</a></li>
+                            <li> <a href="/Admin/Dashboard/ContactMail">İletişim Mail Listele</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-analytics-10"></span><span class="mtext">Çözüm Ortağı Ayarları</span>
+                        </a>
+                        <ul class="submenu">
+                            <li> <a href="/Admin/Dashboard/Brand">Çözüm Ortağı Listele</a></li>
+                            <li> <a href="/Admin/Brand/AddBrand">Çözüm Ortağı Ekle</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-analytics-18"></span><span class="mtext">Servis Ayarları</span>
+                        </a>
+                        <ul class="submenu">
+                            <li> <a href="/Admin/Dashboard/Service">Servis Listele</a></li>
+                            <li> <a href="/Admin/Service/AddService">Servis Ekle</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-pie-chart"></span><span class="mtext">Slider</span>
+                        </a>
+                        <ul class="submenu">
+                            <li> <a href="/Admin/Dashboard/MainSlider">Ana Slider Listele</a></li>
+                            <li> <a href="/Admin/MainSlider/AddMainSlider">Ana Slider Ekle</a></li>
+                            <li> <a href="/Admin/Dashboard/Slider">Slider Listele</a></li>
+                            <li> <a href="/Admin/Slider/AddSlider">Slider Ekle</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-user"></span><span class="mtext">Sosyal Medya Ayarları</span>
+                        </a>
+                        <ul class="submenu">
+                            <li> <a href="/Admin/Dashboard/SocialMedia">Sosyal Medya Listele</a></li>
+                            <li> <a href="/Admin/SocialMedia/AddSocialMedia">Sosyal Medya Ekle</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-pie-chart"></span><span class="mtext">Dil</span>
+                        </a>
+                        <ul class="submenu">
+                            <li> <a href="/Admin/Dashboard/Languages">Dil Listele</a></li>
+                            @*<li> <a href="/Admin/Lang/AddLang">Dil Ekle</a></li>*@
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-pie-chart"></span><span class="mtext">Seo Ayarları</span>
+                        </a>
+                        <ul class="submenu">
+                            <li> <a href="/Admin/Dashboard/MainGoogleSeo">Seo Listele</a></li>
+                            <li> <a href="/Admin/MainGoogleSeo/AddGoogleSeo">Seo Ekle</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon dw dw-user"></span><span class="mtext">Kullanıcı Ayarları</span>
+                        </a>
+                        <ul class="submenu">
+                            <li> <a href="/Admin/Dashboard/UserMember">Kullanıcı Listele</a></li>
+                            <li> <a href="/Admin/UserMember/AddUserMember">Kullanıcı Ekle</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu-overlay"></div>
+
+    <div class="main-container">
+        @RenderBody()
+    </div>
+    <!-- js -->
+    <script src="~/Areas/Admin/Context/Admin/vendors/scripts/core.js"></script>
+    <script src="~/Areas/Admin/Context/Admin/vendors/scripts/script.min.js"></script>
+    <script src="~/Areas/Admin/Context/Admin/vendors/scripts/process.js"></script>
+    <script src="~/Areas/Admin/Context/Admin/vendors/scripts/layout-settings.js"></script>
+    <script src="~/Areas/Admin/Context/Admin/src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/Areas/Admin/Context/Admin/src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Areas/Admin/Context/Admin/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+    <script src="~/Areas/Admin/Context/Admin/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+    <!-- buttons for Export datatable -->
+    <script src="~/Areas/Admin/Context/Admin/src/plugins/datatables/js/dataTables.buttons.min.js"></script>
+    <script src="~/Areas/Admin/Context/Admin/src/plugins/datatables/js/buttons.bootstrap4.min.js"></script>
+    <script src="~/Areas/Admin/Context/Admin/src/plugins/datatables/js/buttons.print.min.js"></script>
+    <script src="~/Areas/Admin/Context/Admin/src/plugins/datatables/js/buttons.html5.min.js"></script>
+    <script src="~/Areas/Admin/Context/Admin/src/plugins/datatables/js/buttons.flash.min.js"></script>
+    <script src="~/Areas/Admin/Context/Admin/src/plugins/datatables/js/pdfmake.min.js"></script>
+    <script src="~/Areas/Admin/Context/Admin/src/plugins/datatables/js/vfs_fonts.js"></script>
+    <!-- Datatable Setting js -->
+    <script src="~/Areas/Admin/Context/Admin/vendors/scripts/datatable-setting.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

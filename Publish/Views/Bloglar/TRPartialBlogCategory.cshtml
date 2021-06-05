@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Influencer.Entities.Entity.BlogCategory>
+<!-- Portfolio section  -->
+<div class="portfolio-2-section">
+    <ul class="portfolio-filter pf-2 controls">
+        <li class="control" data-filter="all">Hepsi</li>
+        @foreach (var item in Model)
+        {
+            <li class="control" data-filter=".@item.ID">@item.Title</li>
+        }
+    </ul>
+    <div class="portfolio-warp">
+        <div class="row portfolio-gallery m-0">
+            @{
+                Html.RenderAction("TRPartialBlogList", "Bloglar");
+            }
+        </div>
+    </div>
+</div>
+<!-- Portfolio section end  -->

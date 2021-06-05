@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "EN";
+    Layout = "~/Views/Shared/En/_Layout.cshtml";
+}
+<section class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                @{
+                    Html.RenderAction("ENPartialContact", "Iletisim");
+                }
+            </div>
+            <div class="col-lg-8">
+                <form class="contact-form" action="/en/application-form" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label class="mb-2">Name</label>
+                            <input type="text" name="Name" required>
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="mb-2">Surname</label>
+                            <input type="text" name="Surname" required>
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="mb-2">City</label>
+                            <input type="text" name="City" required>
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="mb-2">District</label>
+                            <input type="text" name="District" required>
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="mb-2">Resume(.pdf)</label>
+                            <input type="file" name="FilePath" required>
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="mb-2">Subject</label>
+                            <select class="form-control" name="Subject" required>
+                                <optgroup label="Please Select Subject">
+                                    <option value="Genel İş Başvurusu">General Job Application</option>
+                                    <option value="Sosyal Medya Uzmanı">Social Media Specialist</option>
+                                    <option value="Grafik Tasarım Uzmanı">Graphic Design Specialist</option>
+                                    <option value="Dijital Pazarlama Uzmanı">Digital Marketing Specialist</option>
+                                    <option value="Menajerlik Başvurusu">Manager Job Application</option>
+                                    <option value="Influencer Başvurusu">Influencer Job Application</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="col-lg-4">
+                        </div>
+                        <div class="col-lg-12 mb-5">
+                            <label class="mb-2">Message</label>
+                            <textarea class="text-msg" name="Content"></textarea>
+                            <button class="site-btn" type="submit">Mesaj Gönder</button>
+                        </div>
+                        @if (ViewBag.Mesaj != null)
+                        {
+                            <div class="col-lg-12">
+                                <p class="alert alert-info">@ViewBag.Mesaj</p>
+                            </div>
+                        }
+                        @if (ViewBag.Hata != null)
+                        {
+                            <div class="col-lg-12">
+                                <p class="alert alert-danger">@ViewBag.Hata</p>
+                            </div>
+                        }
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact section end  -->

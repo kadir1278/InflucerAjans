@@ -1,0 +1,42 @@
+﻿@model Influencer.Entities.Entity.Blog
+@{
+    ViewBag.Title = Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="servis-detay mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="~/Image/Services/@Model.File" alt="@Model.Title" />
+                <hr />
+                <h1>@Model.Title</h1>
+                <p>@Html.Raw(Model.Content)</p>
+            </div>
+        </div>
+    </div>
+</div>
+@foreach (var item in Model.BlogDetails)
+{
+    <div class="servis-detay mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    @if (item.File.EndsWith(".PNG") || item.File.EndsWith(".JPG") || item.File.EndsWith(".JPEG") || item.File.EndsWith(".GIF") || item.File.EndsWith(".TIFF") || item.File.EndsWith(".jpg") || item.File.EndsWith(".png") || item.File.EndsWith(".jpeg") || item.File.EndsWith(".tiff") || item.File.EndsWith(".gif"))
+                    {
+                        <img src="~/Image/Services/@Model.File" alt="@Model.Title" />
+                    }
+                    else if (item.File.EndsWith(".avi") || item.File.EndsWith(".AVI") || item.File.EndsWith(".mp4") || item.File.EndsWith(".MP4") || item.File.EndsWith(".mov") || item.File.EndsWith(".MOV") || item.File.EndsWith(".flv") || item.File.EndsWith(".FLV") || item.File.EndsWith(".mpg") || item.File.EndsWith(".MPG"))
+                    {
+                            <video controls>
+                                <source src="~/Image/BlogDetails/@item.File" type="video/mp4">
+                            </video>
+                    }
+
+                    <hr />
+                    <h1>@item.Title</h1>
+                    <p>@Html.Raw(item.Content)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}

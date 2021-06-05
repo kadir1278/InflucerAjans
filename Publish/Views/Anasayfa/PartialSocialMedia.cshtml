@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Influencer.Entities.Entity.SocialMedia>
+@foreach (var item in Model)
+{
+    if (item.Title != "Whatsapp")
+    {
+        <a href="@item.URL" target="_blank" rel="nofollow" title="Influencer Ajans"><i class="@item.Icon"></i></a>
+    }
+    if (item.Title == "Whatsapp")
+    {
+        <a href="https://api.whatsapp.com/send?phone=@item.URL" target="_blank" rel="nofollow" title="Influencer Ajans"><i class="fa fa-whatsapp"></i></a>
+    }
+}
