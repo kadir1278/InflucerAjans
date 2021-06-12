@@ -13,12 +13,14 @@ namespace InfluencerWEBUI.Controllers
         #region TR
         public ActionResult TR()
         {
+            ViewBag.Seo = db.MainGoogleSeos.Where(x => x.IsActive == true && x.PageName == "Menajerlerimiz").FirstOrDefault();
             return View(db.Inflencers.Where(x => x.IsActive == true && x.LangTableID == 1).ToList().OrderBy(x => x.Name + " " + x.Surname));
         }
         #endregion
         #region EN
         public ActionResult EN()
         {
+            ViewBag.Seo = db.MainGoogleSeos.Where(x => x.IsActive == true && x.PageName == "Our Managers").FirstOrDefault();
             return View(db.Inflencers.Where(x => x.IsActive == true && x.LangTableID == 2).ToList().OrderBy(x => x.Name + " " + x.Surname));
         }
         #endregion

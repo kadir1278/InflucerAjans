@@ -93,7 +93,6 @@ namespace InfluencerWEBUI.Areas.Admin.Controllers
                     AU.seoFacebookKeywrods = googleSeo.seoFacebookKeywrods;
                     AU.seoFacebookDescription = googleSeo.seoFacebookDescription;
                     AU.seoFacebookUrl = googleSeo.seoFacebookUrl;
-                    AU.LangTableID = googleSeo.LangTableID;
                     AU.IsActive = googleSeo.IsActive;
                     AU.LastDateTime = DateTime.Now;
                     db.SaveChanges();

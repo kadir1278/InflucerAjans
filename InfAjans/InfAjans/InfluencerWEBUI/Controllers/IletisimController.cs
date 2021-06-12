@@ -16,12 +16,14 @@ namespace InfluencerWEBUI.Controllers
         #region TR
         public ActionResult TR()
         {
+            ViewBag.Seo = db.MainGoogleSeos.Where(x => x.IsActive == true && x.PageName == "İletişim").FirstOrDefault();
             return View();
         }
         [HttpPost]
         [Route("tr/iletisim")]
         public ActionResult TR(ContactMail contactMail)
         {
+            ViewBag.Seo = db.MainGoogleSeos.Where(x => x.IsActive == true && x.PageName == "İletişim").FirstOrDefault();
             if (ModelState.IsValid)
             {
                 try
@@ -61,12 +63,14 @@ namespace InfluencerWEBUI.Controllers
         #region EN
         public ActionResult EN()
         {
+            ViewBag.Seo = db.MainGoogleSeos.Where(x => x.IsActive == true && x.PageName == "Contact").FirstOrDefault();
             return View();
         }
         [HttpPost]
         [Route("en/contacts")]
         public ActionResult EN(ContactMail contactMail)
         {
+            ViewBag.Seo = db.MainGoogleSeos.Where(x => x.IsActive == true && x.PageName == "Contact").FirstOrDefault();
             if (ModelState.IsValid)
             {
                 try

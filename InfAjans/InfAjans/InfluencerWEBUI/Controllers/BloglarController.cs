@@ -15,6 +15,7 @@ namespace InfluencerWEBUI.Controllers
         #region TR
         public ActionResult TR()
         {
+            ViewBag.Seo = db.MainGoogleSeos.Where(x => x.IsActive == true && x.PageName == "Bloglar").FirstOrDefault();
             return View();
         }
 
@@ -32,6 +33,7 @@ namespace InfluencerWEBUI.Controllers
         #region EN
         public ActionResult EN()
         {
+            ViewBag.Seo = db.MainGoogleSeos.Where(x => x.IsActive == true && x.PageName == "Blogs").FirstOrDefault();
             return View();
         }
         public ActionResult ENPartialBlogCategory()

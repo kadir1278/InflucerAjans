@@ -15,6 +15,7 @@ namespace InfluencerWEBUI.Controllers
         // GET: Anasayfa
         public ActionResult TR()
         {
+            ViewBag.Seo = db.MainGoogleSeos.Where(x => x.IsActive == true && x.PageName == "Anasayfa").FirstOrDefault();
             return View();
         }
         public ActionResult TRPartialSliderList()
@@ -45,6 +46,7 @@ namespace InfluencerWEBUI.Controllers
         #region EN
         public ActionResult EN()
         {
+            ViewBag.Seo = db.MainGoogleSeos.Where(x => x.IsActive == true && x.PageName == "Home").FirstOrDefault();
             return View();
         }
         public ActionResult ENPartialSliderList()

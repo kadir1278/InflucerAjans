@@ -17,12 +17,14 @@ namespace InfluencerWEBUI.Controllers
         #region TR
         public ActionResult TR()
         {
+            ViewBag.Seo = db.MainGoogleSeos.Where(x => x.IsActive == true && x.PageName == "Başvuru Formu").FirstOrDefault();
             return View();
         }
         [HttpPost]
         [Route("tr/basvuru-formu")]
         public ActionResult TR(ApplicationForm applicationForm, HttpPostedFileBase FilePath)
         {
+            ViewBag.Seo = db.MainGoogleSeos.Where(x => x.IsActive == true && x.PageName == "Başvuru Formu").FirstOrDefault();
             if (ModelState.IsValid)
             {
                 try
@@ -66,12 +68,14 @@ namespace InfluencerWEBUI.Controllers
         #region EN
         public ActionResult EN()
         {
+            ViewBag.Seo = db.MainGoogleSeos.Where(x => x.IsActive == true && x.PageName == "Application Form").FirstOrDefault();
             return View();
         }
         [HttpPost]
         [Route("en/application-form")]
         public ActionResult EN(ApplicationForm applicationForm, HttpPostedFileBase FilePath)
         {
+            ViewBag.Seo = db.MainGoogleSeos.Where(x => x.IsActive == true && x.PageName == "Application Form").FirstOrDefault();
             if (ModelState.IsValid)
             {
                 try

@@ -18,15 +18,12 @@ namespace Influencer.Entities.Entity
             this.Abouts = new HashSet<About>();
             this.BlogCategories = new HashSet<BlogCategory>();
             this.InNews = new HashSet<InNew>();
-            this.MainGoogleSeos = new HashSet<MainGoogleSeo>();
 
 
 
         }
         public string LangName { get; set; }
         public string LangCode { get; set; }
-
-        public virtual ICollection<MainGoogleSeo> MainGoogleSeos { get; set; }
 
         public virtual ICollection<InNew> InNews { get; set; }
 
