@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Influencer.Entities.Entity.Blog>
+@foreach (var item in Model)
+{
+    <div class="mix col-lg-4 col-sm-6 p-0 @item.BlogCategoryID">
+        <div class="portfolio-box">
+            <a href="/tr/bloglar/@item.Slug"><img class="portfolio-item set-bg" src="~/Image/Blogs/@item.File" /></a>
+            <h6>@item.Title</h6>
+        </div>
+    </div>
+}

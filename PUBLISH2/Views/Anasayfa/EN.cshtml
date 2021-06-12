@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/En/_Layout.cshtml";
+}
+@{
+    Html.RenderAction("ENPartialSliderList", "Anasayfa");
+}
+
+<!-- Services section  -->
+@{
+    Html.RenderAction("ENPartialServiceList", "Anasayfa");
+}
+<!-- Services section end  -->
+<!-- About section  -->
+@{
+    Html.RenderAction("ENPartialAbout", "Anasayfa");
+}
+<!-- About section end  -->
+<!-- Portfolio section  -->
+<div class="icerik mb-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="services-item">
+                                <img src="~/Content/Site/cubes.png" width="75" />
+                                <h4 class="baslik">Original and Quality Works</h4>
+                                <p class="aciklama">Any business that does not make a difference is bound to be ordinary. Our creative team, which aims to make a difference in everything it does, regardless of whether it is big or small, by getting rid of the ordinary, knows very well that the key to success is originality.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="services-item">
+                                <img src="~/Content/Site/users-icon.png" width="75" />
+                                <h4 class="baslik">Expert staff</h4>
+                                <p class="aciklama">Personal competence brings success in all areas. Our team, which has been working to manage the digital world in the leading corporate companies of the sector since the emergence of the online world, now uses this knowledge for Influencer Agency's customers.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="services-item">
+                                <img src="~/Content/Site/barchart.png" width="75" />
+                                <h4 class="baslik">Analytical Thinking</h4>
+                                <p class="aciklama">Numbers sometimes mean more than words. We know that the digital world is formed around numbers and we explain our business analytically with detailed analyzes every month. This report, which will allow you to compare months, will show where you are in the digital world.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@{
+    Html.RenderAction("ENPartialOurSolitionPartnerList", "Anasayfa");
+}
+
+<!-- Portfolio section end  -->

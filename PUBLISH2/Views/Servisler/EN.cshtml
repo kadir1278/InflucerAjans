@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Influencer.Entities.Entity.Service>
+@{
+    ViewBag.Title = "Services";
+    Layout = "~/Views/Shared/En/_Layout.cshtml";
+}
+<!-- Blog section  -->
+<section class="blog-section">
+    <div class="blog-warp">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-sm-6">
+                    <div class="blog-post">
+                        <a href="/en/services/@item.Slug"><img src="~/Image/Services/@item.ImageVideoPath" alt="@item.Title"></a>
+                        <h3><a href="/en/services/@item.Slug">@item.Title</a></h3>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<!-- Blog section end  -->

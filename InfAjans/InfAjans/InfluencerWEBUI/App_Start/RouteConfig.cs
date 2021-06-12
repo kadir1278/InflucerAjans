@@ -207,6 +207,11 @@ namespace InfluencerWEBUI
                defaults: new { controller = "Anasayfa", action = "PartialSocialMedia"/*, id = UrlParameter.Optional*/ }
            );
             #endregion
+            routes.MapRoute(
+                name: "NotFound404",
+                url: "{*url}",
+                defaults: new { controller = "Error", action = "NotFound404" }
+            );
         }
     }
 }

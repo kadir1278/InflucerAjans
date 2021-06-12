@@ -631,6 +631,11 @@
     <Content Include="Areas\Admin\Context\mekasoftware\MiniLogo.png" />
     <Content Include="Areas\Admin\Context\mekasoftware\NewLogo.png" />
     <Content Include="Areas\Admin\Context\mekasoftware\pdf.png" />
+    <Content Include="Content\Error\css\bootstrap.css" />
+    <Content Include="Content\Error\css\style.css" />
+    <Content Include="Content\Error\img\bg.jpg" />
+    <Content Include="Content\Error\js\bootstrap.js" />
+    <Content Include="Content\Error\js\jquery.js" />
     <Content Include="Content\Site\barchart.png" />
     <Content Include="Content\Site\cubes.png" />
     <Content Include="Content\Site\logooENG.png" />
@@ -1657,6 +1662,7 @@
     <Compile Include="Controllers\BloglarController.cs" />
     <Compile Include="Controllers\BloglarDetayController.cs" />
     <Compile Include="Controllers\CozumOrtaklarimizController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HakkimizdaController.cs" />
     <Compile Include="Controllers\IletisimController.cs" />
     <Compile Include="Controllers\InfluencersController.cs" />
@@ -1666,6 +1672,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logger\LogInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1896,6 +1903,7 @@
     <Content Include="Views\Anasayfa\PartialSocialMedia.cshtml" />
     <Content Include="Views\MenajerDetay\TR.cshtml" />
     <Content Include="Views\MenajerDetay\EN.cshtml" />
+    <Content Include="Views\Error\NotFound404.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

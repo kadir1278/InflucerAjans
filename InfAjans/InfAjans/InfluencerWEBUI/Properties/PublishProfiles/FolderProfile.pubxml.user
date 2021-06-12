@@ -4,7 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\Publish</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\MekaSoftech\OneDrive\Masaüstü\Github\InflucerAjans\PUBLISH2</_PublishTargetUrl>
+    <History>True|2021-06-12T02:46:32.5848646Z;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/Admin/Context/Admin/src/fonts/dropways/dropways.css">
@@ -1985,7 +1986,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/28/2021 11:51:07</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Dashboard/MainGoogleSeo.cshtml">
-      <publishTime>05/28/2021 11:51:07</publishTime>
+      <publishTime>06/12/2021 03:27:44</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Dashboard/MainSlider.cshtml">
       <publishTime>05/28/2021 11:51:07</publishTime>
@@ -2027,10 +2028,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/28/2021 11:51:07</publishTime>
     </File>
     <File Include="Areas/Admin/Views/MainGoogleSeo/AddGoogleSeo.cshtml">
-      <publishTime>06/04/2021 04:45:35</publishTime>
+      <publishTime>06/12/2021 03:59:18</publishTime>
     </File>
     <File Include="Areas/Admin/Views/MainGoogleSeo/UpdateGoogleSeo.cshtml">
-      <publishTime>05/28/2021 11:51:08</publishTime>
+      <publishTime>06/12/2021 03:24:14</publishTime>
     </File>
     <File Include="Areas/Admin/Views/MainSlider/AddMainSlider.cshtml">
       <publishTime>05/28/2021 11:51:08</publishTime>
@@ -2084,19 +2085,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/28/2021 11:51:09</publishTime>
     </File>
     <File Include="bin/Influencer.Entities.dll">
-      <publishTime>06/04/2021 17:13:21</publishTime>
+      <publishTime>06/12/2021 05:46:22</publishTime>
     </File>
     <File Include="bin/Influencer.Entities.dll.config">
       <publishTime>06/02/2021 14:49:28</publishTime>
     </File>
     <File Include="bin/Influencer.Entities.pdb">
-      <publishTime>06/04/2021 17:13:21</publishTime>
+      <publishTime>06/12/2021 05:46:22</publishTime>
     </File>
     <File Include="bin/InfluencerWEBUI.dll">
-      <publishTime>06/04/2021 17:13:22</publishTime>
+      <publishTime>06/12/2021 05:46:23</publishTime>
     </File>
     <File Include="bin/InfluencerWEBUI.pdb">
-      <publishTime>06/04/2021 17:13:22</publishTime>
+      <publishTime>06/12/2021 05:46:23</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>05/28/2021 11:51:09</publishTime>
@@ -2268,6 +2269,21 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="bin/System.Web.Webpages.Razor.dll">
       <publishTime>05/28/2021 11:51:09</publishTime>
+    </File>
+    <File Include="Content/Error/css/bootstrap.css">
+      <publishTime>06/12/2021 05:40:21</publishTime>
+    </File>
+    <File Include="Content/Error/css/style.css">
+      <publishTime>06/12/2021 05:40:21</publishTime>
+    </File>
+    <File Include="Content/Error/img/bg.jpg">
+      <publishTime>06/12/2021 05:40:21</publishTime>
+    </File>
+    <File Include="Content/Error/js/bootstrap.js">
+      <publishTime>06/12/2021 05:40:21</publishTime>
+    </File>
+    <File Include="Content/Error/js/jquery.js">
+      <publishTime>06/12/2021 05:40:21</publishTime>
     </File>
     <File Include="Content/Site/barchart.png">
       <publishTime>05/31/2021 22:21:27</publishTime>
@@ -5345,7 +5361,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/30/2021 15:50:08</publishTime>
     </File>
     <File Include="Views/Anasayfa/ENPartialOurSolitionPartnerList.cshtml">
-      <publishTime>05/31/2021 22:12:25</publishTime>
+      <publishTime>06/12/2021 05:02:45</publishTime>
     </File>
     <File Include="Views/Anasayfa/ENPartialServiceList.cshtml">
       <publishTime>05/31/2021 22:26:13</publishTime>
@@ -5363,7 +5379,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/29/2021 20:20:46</publishTime>
     </File>
     <File Include="Views/Anasayfa/TRPartialOurSolitionPartnerList.cshtml">
-      <publishTime>05/31/2021 17:05:28</publishTime>
+      <publishTime>06/12/2021 05:03:07</publishTime>
     </File>
     <File Include="Views/Anasayfa/TRPartialServiceList.cshtml">
       <publishTime>05/30/2021 19:53:25</publishTime>
@@ -5407,6 +5423,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Views/CozumOrtaklarimiz/TR.cshtml">
       <publishTime>06/01/2021 11:31:31</publishTime>
     </File>
+    <File Include="Views/Error/NotFound404.cshtml">
+      <publishTime>06/12/2021 05:44:14</publishTime>
+    </File>
     <File Include="Views/Hakkimizda/EN.cshtml">
       <publishTime>05/30/2021 16:14:17</publishTime>
     </File>
@@ -5426,16 +5445,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/03/2021 16:08:45</publishTime>
     </File>
     <File Include="Views/Influencers/EN.cshtml">
-      <publishTime>06/04/2021 06:51:09</publishTime>
+      <publishTime>06/12/2021 05:06:36</publishTime>
     </File>
     <File Include="Views/Influencers/TR.cshtml">
-      <publishTime>06/04/2021 06:50:45</publishTime>
+      <publishTime>06/12/2021 05:06:17</publishTime>
     </File>
     <File Include="Views/MenajerDetay/EN.cshtml">
       <publishTime>06/04/2021 06:56:03</publishTime>
     </File>
     <File Include="Views/MenajerDetay/TR.cshtml">
-      <publishTime>06/04/2021 06:55:32</publishTime>
+      <publishTime>06/11/2021 15:42:24</publishTime>
     </File>
     <File Include="Views/ServisDetay/EN.cshtml">
       <publishTime>06/01/2021 05:50:47</publishTime>
@@ -5450,10 +5469,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/31/2021 22:36:09</publishTime>
     </File>
     <File Include="Views/Shared/En/_Layout.cshtml">
-      <publishTime>06/04/2021 06:23:32</publishTime>
+      <publishTime>06/12/2021 05:05:17</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>06/04/2021 06:23:45</publishTime>
+      <publishTime>06/12/2021 05:05:26</publishTime>
     </File>
     <File Include="Views/web.config">
       <publishTime>05/28/2021 11:51:08</publishTime>
